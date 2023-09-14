@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sailors Condensed.ttf">
+            <string>SailorsCondensed</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="359" id="KGk-i7-Jjw" customClass="MovieInfoCell" customModule="CountryApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="302" height="218"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="302" height="218"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gc3-N7-eL4">
+                        <rect key="frame" x="0.0" y="0.0" width="302" height="218"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="qSk-d4-Y7U">
+                                <rect key="frame" x="20" y="20" width="100" height="173"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7FQ-WI-omn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ANDHADHUDH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvF-fi-tyI">
+                                <rect key="frame" x="140" y="30" width="142" height="24.333333333333329"/>
+                                <fontDescription key="fontDescription" name="SailorsCondensed" family="Sailors Condensed" pointSize="20"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HINIDI" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQ1-Kb-wLf">
+                                <rect key="frame" x="140" y="74.333333333333329" width="142" height="19.666666666666671"/>
+                                <fontDescription key="fontDescription" name="SailorsCondensed" family="Sailors Condensed" pointSize="16"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gener : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zc-EV-H8u">
+                                <rect key="frame" x="140" y="114" width="57" height="19.666666666666657"/>
+                                <fontDescription key="fontDescription" name="SailorsCondensed" family="Sailors Condensed" pointSize="16"/>
+                                <color key="textColor" name="FontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMEDY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOI-EK-w7o">
+                                <rect key="frame" x="217" y="114" width="57.666666666666686" height="19.666666666666657"/>
+                                <fontDescription key="fontDescription" name="SailorsCondensed" family="Sailors Condensed" pointSize="16"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PyY-GI-yNG">
+                                <rect key="frame" x="0.0" y="213" width="302" height="5"/>
+                                <color key="backgroundColor" name="FontColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="rGb-F9-0pc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3zc-EV-H8u" firstAttribute="top" secondItem="gQ1-Kb-wLf" secondAttribute="bottom" constant="20" id="0tj-Me-Fii"/>
+                            <constraint firstItem="gQ1-Kb-wLf" firstAttribute="top" secondItem="vvF-fi-tyI" secondAttribute="bottom" constant="20" id="4Dr-93-sUj"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="3zc-EV-H8u" secondAttribute="bottom" constant="20" id="5vZ-a0-JCW"/>
+                            <constraint firstAttribute="trailing" secondItem="gQ1-Kb-wLf" secondAttribute="trailing" constant="20" id="9ym-Cv-c5V"/>
+                            <constraint firstItem="3zc-EV-H8u" firstAttribute="leading" secondItem="gQ1-Kb-wLf" secondAttribute="leading" id="AWq-aL-vTB"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xOI-EK-w7o" secondAttribute="trailing" constant="20" id="DaW-e1-CjF"/>
+                            <constraint firstAttribute="bottom" secondItem="PyY-GI-yNG" secondAttribute="bottom" id="DmL-pF-Tg6"/>
+                            <constraint firstItem="PyY-GI-yNG" firstAttribute="leading" secondItem="Gc3-N7-eL4" secondAttribute="leading" id="IBl-Fr-6GN"/>
+                            <constraint firstItem="xOI-EK-w7o" firstAttribute="top" secondItem="3zc-EV-H8u" secondAttribute="top" id="LkH-Y5-ja9"/>
+                            <constraint firstItem="xOI-EK-w7o" firstAttribute="bottom" secondItem="3zc-EV-H8u" secondAttribute="bottom" id="N9y-Wf-fPA"/>
+                            <constraint firstAttribute="trailing" secondItem="vvF-fi-tyI" secondAttribute="trailing" constant="20" id="ODW-fi-bXx"/>
+                            <constraint firstAttribute="trailing" secondItem="PyY-GI-yNG" secondAttribute="trailing" id="hhJ-KY-iKh"/>
+                            <constraint firstItem="gQ1-Kb-wLf" firstAttribute="leading" secondItem="vvF-fi-tyI" secondAttribute="leading" id="ieW-hf-OTM"/>
+                            <constraint firstItem="vvF-fi-tyI" firstAttribute="top" secondItem="Gc3-N7-eL4" secondAttribute="top" constant="30" id="kYR-1Y-IRf"/>
+                            <constraint firstItem="qSk-d4-Y7U" firstAttribute="top" secondItem="Gc3-N7-eL4" secondAttribute="top" constant="20" id="pbr-yc-S6e"/>
+                            <constraint firstItem="xOI-EK-w7o" firstAttribute="leading" secondItem="3zc-EV-H8u" secondAttribute="trailing" constant="20" id="uSb-fC-j18"/>
+                            <constraint firstItem="PyY-GI-yNG" firstAttribute="top" secondItem="qSk-d4-Y7U" secondAttribute="bottom" constant="20" id="uYZ-Hy-Tqr"/>
+                            <constraint firstItem="vvF-fi-tyI" firstAttribute="leading" secondItem="qSk-d4-Y7U" secondAttribute="trailing" constant="20" id="urG-ts-EfR"/>
+                            <constraint firstItem="qSk-d4-Y7U" firstAttribute="leading" secondItem="Gc3-N7-eL4" secondAttribute="leading" constant="20" id="yjw-1c-TqZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Gc3-N7-eL4" secondAttribute="trailing" id="ALv-t4-VQd"/>
+                    <constraint firstItem="Gc3-N7-eL4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Dl6-6K-z9d"/>
+                    <constraint firstAttribute="bottom" secondItem="Gc3-N7-eL4" secondAttribute="bottom" id="nXp-NG-bFs"/>
+                    <constraint firstItem="Gc3-N7-eL4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tkH-3O-Kyj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="movieGeners" destination="xOI-EK-w7o" id="R0d-94-ZWC"/>
+                <outlet property="movieLanguage" destination="gQ1-Kb-wLf" id="Ljc-wq-Rax"/>
+                <outlet property="movieName" destination="vvF-fi-tyI" id="4iq-KN-wjk"/>
+                <outlet property="moviePoster" destination="qSk-d4-Y7U" id="RHZ-Af-hmY"/>
+            </connections>
+            <point key="canvasLocation" x="116.03053435114504" y="50"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="noImage" width="83.333335876464844" height="83.333335876464844"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundColor">
+            <color red="0.92549019607843142" green="0.45098039215686275" blue="0.062745098039215685" alpha="0.079999998211860657" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FontColor">
+            <color red="0.015686274509803921" green="0.074509803921568626" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

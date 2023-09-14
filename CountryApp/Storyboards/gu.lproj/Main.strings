@@ -1,0 +1,222 @@
+
+/* Class = "UILabel"; text = "Geners"; ObjectID = "02i-KY-6mJ"; */
+"02i-KY-6mJ.text" = "Geners";
+
+/* Class = "UITextField"; placeholder = "Search Your Country "; ObjectID = "0C4-MB-9jA"; */
+"0C4-MB-9jA.placeholder" = "Search Your Country ";
+
+/* Class = "UILabel"; text = "movie Data"; ObjectID = "0NL-dL-c6s"; */
+"0NL-dL-c6s.text" = "movie Data";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "16k-bG-CBL"; */
+"16k-bG-CBL.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1sY-0i-a3C"; */
+"1sY-0i-a3C.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "NO"; ObjectID = "1uU-Ji-vyn"; */
+"1uU-Ji-vyn.text" = "NO";
+
+/* Class = "UILabel"; text = "season info"; ObjectID = "28e-0d-VbO"; */
+"28e-0d-VbO.text" = "season info";
+
+/* Class = "UILabel"; text = "ASIA"; ObjectID = "2vv-rz-8fL"; */
+"2vv-rz-8fL.text" = "ASIA";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "38n-xa-LBD"; */
+"38n-xa-LBD.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3Pv-Tq-fSu"; */
+"3Pv-Tq-fSu.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "compositional Layout "; ObjectID = "3gn-d8-0KQ"; */
+"3gn-d8-0KQ.text" = "compositional Layout ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4Yt-e1-D3g"; */
+"4Yt-e1-D3g.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4vw-RB-MJI"; */
+"4vw-RB-MJI.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Show Season "; ObjectID = "6rL-76-GCX"; */
+"6rL-76-GCX.configuration.title" = "Show Season ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6rL-76-GCX"; */
+"6rL-76-GCX.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Search Your Web Series Here "; ObjectID = "6w7-Zz-NOk"; */
+"6w7-Zz-NOk.placeholder" = "Search Your Web Series Here ";
+
+/* Class = "UILabel"; text = "Country Detail "; ObjectID = "7V1-yo-DFr"; */
+"7V1-yo-DFr.text" = "Country Detail ";
+
+/* Class = "UILabel"; text = "Web Series Detail "; ObjectID = "7ZP-xv-zW0"; */
+"7ZP-xv-zW0.text" = "Web Series Detail ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "B25-Kc-DGl"; */
+"B25-Kc-DGl.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "BEf-fl-mfP"; */
+"BEf-fl-mfP.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Gujarati"; ObjectID = "BOb-em-Aer"; */
+"BOb-em-Aer.text" = "Gujarati";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "BVa-Kc-YVG"; */
+"BVa-Kc-YVG.text" = "10";
+
+/* Class = "UILabel"; text = "Episodes Info"; ObjectID = "EQU-rR-Zdf"; */
+"EQU-rR-Zdf.text" = "Episodes Info";
+
+/* Class = "UILabel"; text = "Series NO :"; ObjectID = "EmU-Fc-17r"; */
+"EmU-Fc-17r.text" = "Series NO :";
+
+/* Class = "UILabel"; text = "Capital :"; ObjectID = "I9i-8m-1Z2"; */
+"I9i-8m-1Z2.text" = "Capital :";
+
+/* Class = "UILabel"; text = "Product "; ObjectID = "IzF-vi-M4E"; */
+"IzF-vi-M4E.text" = "Product ";
+
+/* Class = "UILabel"; text = "10 Sept 2023"; ObjectID = "MXg-M4-ZBw"; */
+"MXg-M4-ZBw.text" = "10 Sept 2023";
+
+/* Class = "UILabel"; text = "TableView Diffable"; ObjectID = "NfD-AK-bih"; */
+"NfD-AK-bih.text" = "TableView Diffable";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PZa-kt-1Yx"; */
+"PZa-kt-1Yx.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Q0H-qk-8B7"; */
+"Q0H-qk-8B7.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Status "; ObjectID = "QQr-YI-oPX"; */
+"QQr-YI-oPX.text" = "Status ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "QgD-Tx-KXv"; */
+"QgD-Tx-KXv.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Qyg-c1-Iby"; */
+"Qyg-c1-Iby.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "DELHI"; ObjectID = "SUY-0k-lJc"; */
+"SUY-0k-lJc.text" = "DELHI";
+
+/* Class = "UILabel"; text = "Rating :"; ObjectID = "SlV-WU-ooN"; */
+"SlV-WU-ooN.text" = "Rating :";
+
+/* Class = "UILabel"; text = "AVAIBLE "; ObjectID = "Tuo-5E-f5y"; */
+"Tuo-5E-f5y.text" = "AVAIBLE ";
+
+/* Class = "UILabel"; text = "ENGLISH"; ObjectID = "Tut-H5-L9S"; */
+"Tut-H5-L9S.text" = "ENGLISH";
+
+/* Class = "UILabel"; text = "Detail Page:\n1. Name: name\n2. Language: language\n3. Poster: image -> medium\n4. Summary: summary\n5. Network: network -> name\n6. Status: status\n7. Average Runtime: averageRuntime\n8. Genres: genres\n9. Rating: rating -> average"; ObjectID = "Uka-gB-ur3"; */
+"Uka-gB-ur3.text" = "Detail Page:\n1. Name: name\n2. Language: language\n3. Poster: image -> medium\n4. Summary: summary\n5. Network: network -> name\n6. Status: status\n7. Average Runtime: averageRuntime\n8. Genres: genres\n9. Rating: rating -> average";
+
+/* Class = "UILabel"; text = "Region :"; ObjectID = "YP5-U6-3Zj"; */
+"YP5-U6-3Zj.text" = "Region :";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "Yh7-xe-w4S"; */
+"Yh7-xe-w4S.text" = "10";
+
+/* Class = "UILabel"; text = "Summary"; ObjectID = "ZcA-by-HWH"; */
+"ZcA-by-HWH.text" = "Summary";
+
+/* Class = "UILabel"; text = "Republic Of India"; ObjectID = "aCi-aB-tvc"; */
+"aCi-aB-tvc.text" = "Republic Of India";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "abx-4A-XVk"; */
+"abx-4A-XVk.text" = "10";
+
+/* Class = "UILabel"; text = "Is Independent :"; ObjectID = "bSb-vd-gYr"; */
+"bSb-vd-gYr.text" = "Is Independent :";
+
+/* Class = "UILabel"; text = "10:00"; ObjectID = "cKO-0I-67f"; */
+"cKO-0I-67f.text" = "10:00";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cd1-wy-Ec5"; */
+"cd1-wy-Ec5.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Parth Prajapati"; ObjectID = "dBj-xx-Lct"; */
+"dBj-xx-Lct.text" = "Parth Prajapati";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "fE0-YH-v8D"; */
+"fE0-YH-v8D.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Is UN Member:"; ObjectID = "fNy-hq-4Ej"; */
+"fNy-hq-4Ej.text" = "Is UN Member:";
+
+/* Class = "UILabel"; text = "10:00"; ObjectID = "g9A-XX-pDd"; */
+"g9A-XX-pDd.text" = "10:00";
+
+/* Class = "UILabel"; text = "Add Movie Detail Here "; ObjectID = "gFN-PQ-Kgp"; */
+"gFN-PQ-Kgp.text" = "Add Movie Detail Here ";
+
+/* Class = "UILabel"; text = "GAME OF THRONS"; ObjectID = "gf2-L4-ido"; */
+"gf2-L4-ido.text" = "GAME OF THRONS";
+
+/* Class = "UILabel"; text = "Rating :"; ObjectID = "hMt-Bj-uKR"; */
+"hMt-Bj-uKR.text" = "Rating :";
+
+/* Class = "UIButton"; configuration.title = "Search TV Series and Show  Detail"; ObjectID = "hbk-m3-kPn"; */
+"hbk-m3-kPn.configuration.title" = "Search TV Series and Show  Detail";
+
+/* Class = "UILabel"; text = "Duration"; ObjectID = "ijC-aY-owm"; */
+"ijC-aY-owm.text" = "Duration";
+
+/* Class = "UISwitch"; title = "Change Theme"; ObjectID = "kHF-kr-iSW"; */
+"kHF-kr-iSW.title" = "Change Theme";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kfc-CH-KJY"; */
+"kfc-CH-KJY.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "YES "; ObjectID = "l0i-KI-pbj"; */
+"l0i-KI-pbj.text" = "YES ";
+
+/* Class = "UILabel"; text = "Summary :"; ObjectID = "lb6-cV-uPZ"; */
+"lb6-cV-uPZ.text" = "Summary :";
+
+/* Class = "UILabel"; text = "Favorite Country List"; ObjectID = "m8A-Q3-KZf"; */
+"m8A-Q3-KZf.text" = "Favorite Country List";
+
+/* Class = "UILabel"; text = "Family Man"; ObjectID = "mAG-Ls-qp8"; */
+"mAG-Ls-qp8.text" = "Family Man";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mHs-Lj-idO"; */
+"mHs-Lj-idO.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "msL-4M-Xta"; */
+"msL-4M-Xta.text" = "10";
+
+/* Class = "UILabel"; text = "10"; ObjectID = "nDe-5C-mNc"; */
+"nDe-5C-mNc.text" = "10";
+
+/* Class = "UILabel"; text = "Episode NO :"; ObjectID = "ouT-4X-sXd"; */
+"ouT-4X-sXd.text" = "Episode NO :";
+
+/* Class = "UILabel"; text = "Republic Of India"; ObjectID = "rAP-Ps-9hf"; */
+"rAP-Ps-9hf.text" = "Republic Of India";
+
+/* Class = "UILabel"; text = "Breking BedsBreking BedsBreking Be"; ObjectID = "rRf-jZ-Ncy"; */
+"rRf-jZ-Ncy.text" = "Breking BedsBreking BedsBreking Be";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "s1X-pA-5Ro"; */
+"s1X-pA-5Ro.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Country List Demo"; ObjectID = "tgX-AY-z6U"; */
+"tgX-AY-z6U.configuration.title" = "Country List Demo";
+
+/* Class = "UILabel"; text = "Breking Beds"; ObjectID = "uak-Vq-wVV"; */
+"uak-Vq-wVV.text" = "Breking Beds";
+
+/* Class = "UILabel"; text = "WebKit"; ObjectID = "v5G-Uo-uQp"; */
+"v5G-Uo-uQp.text" = "WebKit";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xY0-Ll-Wuf"; */
+"xY0-Ll-Wuf.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Summary"; ObjectID = "yG5-j6-Elm"; */
+"yG5-j6-Elm.text" = "Summary";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "yh5-xv-ADi"; */
+"yh5-xv-ADi.normalTitle" = "Button";

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sailors Condensed.ttf">
+            <string>SailorsCondensed</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="U6b-Vx-4bR" customClass="ResturantHeaderCell" customModule="CountryApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="474" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Gc-Bu-3bX">
+                    <rect key="frame" x="0.0" y="0.0" width="474" height="80"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cch-gr-4jr">
+                            <rect key="frame" x="205.66666666666666" y="27.666666666666671" width="62.999999999999972" height="25"/>
+                            <fontDescription key="fontDescription" name="SailorsCondensed" family="Sailors Condensed" pointSize="20"/>
+                            <color key="textColor" name="AccentColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="BackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="cch-gr-4jr" firstAttribute="centerY" secondItem="2Gc-Bu-3bX" secondAttribute="centerY" id="MJh-zx-Mlu"/>
+                        <constraint firstItem="cch-gr-4jr" firstAttribute="centerX" secondItem="2Gc-Bu-3bX" secondAttribute="centerX" id="TIf-Cn-ikO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="2Gc-Bu-3bX" secondAttribute="bottom" id="KM6-ey-0DL"/>
+                <constraint firstItem="2Gc-Bu-3bX" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="VhS-Xx-TKS"/>
+                <constraint firstAttribute="trailing" secondItem="2Gc-Bu-3bX" secondAttribute="trailing" id="ZUW-qP-Nmw"/>
+                <constraint firstItem="2Gc-Bu-3bX" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="zAP-1V-831"/>
+            </constraints>
+            <connections>
+                <outlet property="lblResturantName" destination="cch-gr-4jr" id="w42-2W-gjd"/>
+            </connections>
+            <point key="canvasLocation" x="247.32824427480915" y="-0.70422535211267612"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundColor">
+            <color red="0.92549019607843142" green="0.45098039215686275" blue="0.062745098039215685" alpha="0.079999998211860657" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MyCollectionViewCell" customModule="CountryApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="286"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="286"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r1I-uQ-2Hm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="286"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="iwa-ZI-Dao">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="286"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iwa-ZI-Dao" secondAttribute="trailing" id="Cer-x5-Jid"/>
+                            <constraint firstAttribute="bottom" secondItem="iwa-ZI-Dao" secondAttribute="bottom" id="QJ8-6T-Yzs"/>
+                            <constraint firstItem="iwa-ZI-Dao" firstAttribute="leading" secondItem="r1I-uQ-2Hm" secondAttribute="leading" id="oSS-aI-TJh"/>
+                            <constraint firstItem="iwa-ZI-Dao" firstAttribute="top" secondItem="r1I-uQ-2Hm" secondAttribute="top" id="qvI-Cn-UEe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="r1I-uQ-2Hm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9p8-fc-9TL"/>
+                <constraint firstItem="r1I-uQ-2Hm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="T1a-Vw-8yi"/>
+                <constraint firstAttribute="trailing" secondItem="r1I-uQ-2Hm" secondAttribute="trailing" id="mRm-T3-CvT"/>
+                <constraint firstAttribute="bottom" secondItem="r1I-uQ-2Hm" secondAttribute="bottom" id="w6t-Xc-MWr"/>
+            </constraints>
+            <size key="customSize" width="375" height="286"/>
+            <connections>
+                <outlet property="imageView" destination="iwa-ZI-Dao" id="qTg-de-ow2"/>
+                <outlet property="view" destination="r1I-uQ-2Hm" id="Nwl-oi-Bno"/>
+            </connections>
+            <point key="canvasLocation" x="377.86259541984731" y="57.74647887323944"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="noImage" width="83.333335876464844" height="83.333335876464844"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.92549019607843142" green="0.45098039215686275" blue="0.062745098039215685" alpha="0.079999998211860657" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

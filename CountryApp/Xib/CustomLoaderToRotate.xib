@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CustomLoaderToRotate" customModule="CountryApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVl-LM-pJR">
+                    <rect key="frame" x="156.66666666666666" y="386" width="80" height="80"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DXE-Sv-sPr">
+                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="88c-BG-t3T"/>
+                        <constraint firstAttribute="width" constant="80" id="FQx-0M-cYN"/>
+                        <constraint firstItem="DXE-Sv-sPr" firstAttribute="top" secondItem="YVl-LM-pJR" secondAttribute="top" id="QZl-mE-nYa"/>
+                        <constraint firstAttribute="bottom" secondItem="DXE-Sv-sPr" secondAttribute="bottom" id="jyj-zT-8Sq"/>
+                        <constraint firstItem="DXE-Sv-sPr" firstAttribute="leading" secondItem="YVl-LM-pJR" secondAttribute="leading" id="pAc-Hp-20d"/>
+                        <constraint firstAttribute="trailing" secondItem="DXE-Sv-sPr" secondAttribute="trailing" id="wCZ-oS-00Q"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="YVl-LM-pJR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1rN-zg-i72"/>
+                <constraint firstItem="YVl-LM-pJR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AAl-ek-ohK"/>
+            </constraints>
+            <connections>
+                <outlet property="centerView" destination="YVl-LM-pJR" id="tL9-GD-xAn"/>
+            </connections>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+</document>
