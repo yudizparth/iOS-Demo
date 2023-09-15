@@ -18,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 //        window?.overrideUserInterfaceStyle = .light
         Config.appDelegator.window = self.window
+        self.window?.overrideUserInterfaceStyle = MTUserDefault.shared.theme.getUserInterface()
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -52,3 +53,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+
+
+enum Theme : Int{
+    case light
+    case dark
+    case device
+    
+    func getUserInterface() -> UIUserInterfaceStyle{
+        switch self {
+        case .light:
+            return .light
+        case .dark:
+            return .dark
+        case .device:
+            return .unspecified
+        }
+        
+    }
+}

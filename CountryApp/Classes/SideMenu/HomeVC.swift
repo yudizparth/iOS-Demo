@@ -9,6 +9,7 @@ import UIKit
 
 class HomeVC: UIViewController, UIGestureRecognizerDelegate{
     
+    @IBOutlet weak var selectedSegment: UISegmentedControl!
     @IBOutlet weak var usetNamelbl: UILabel!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var tableViewWidth: NSLayoutConstraint!
@@ -26,6 +27,7 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate{
            SideMenuModel(icon: UIImage(systemName: "applelogo")!, title: "Logout")
        ]
 
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(SideMenuCellTableViewCell.nib, forCellReuseIdentifier: SideMenuCellTableViewCell.identifier)
@@ -35,10 +37,14 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate{
         tableView.estimatedRowHeight = 80
         let greeting = LocalizationManager.shared.localizedString("Parth Prajapati")
         usetNamelbl.text =  greeting
+        selectedSegment.selectedSegmentIndex = MTUserDefault.shared.theme.rawValue
+        print( MTUserDefault.shared.theme.rawValue)
     }
     
-    @IBAction func tapToChange(_ sender: Any) {
-        self.traitCollection.userInterfaceStyle == .light ? setDarkMode() : setLightMode()
+
+    @IBAction func tapToChnageTheme(_ sender: UISegmentedControl) {
+        MTUserDefault.shared.theme = Theme(rawValue: selectedSegment.selectedSegmentIndex)!
+        self.view.window?.overrideUserInterfaceStyle = MTUserDefault.shared.theme.getUserInterface()
     }
     
     @IBAction func onTapMenuBar (_ sender : UIButton){
@@ -126,7 +132,6 @@ extension HomeVC  : UITableViewDataSource , UITableViewDelegate{
 extension AddMovieInfoVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
-        
         if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             print("Working Fine......",selectedImage)
         } else {

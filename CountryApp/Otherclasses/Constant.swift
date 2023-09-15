@@ -71,3 +71,19 @@ struct PlaceHolder {
 }
 
 
+
+
+struct MTUserDefault {
+    static var shared = MTUserDefault()
+
+    var theme : Theme{
+        get {
+            return Theme(rawValue: Config.userDefault.integer(forKey: "SelectedTheme")) ?? .device
+        }
+        set{
+            Config.userDefault.set(newValue.rawValue , forKey : "SelectedTheme")
+            Config.userDefault.synchronize()
+        }
+        
+    }
+}

@@ -38,8 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
 
-        window?.makeKeyAndVisible()
-        
         if  Config.userDefault.string(forKey: "Language") != nil && Config.userDefault.string(forKey: "Language")! == "gu"
         {
             LocalizationManager.shared.setLanguage("gu")
@@ -56,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             LocalizationManager.shared.setLanguage("en")
             print("en")
         }
-        
+        window?.makeKeyAndVisible()
         return true
     }
     

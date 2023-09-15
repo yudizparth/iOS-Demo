@@ -985,7 +985,7 @@
                                                             <rect key="frame" x="20" y="280" width="390" height="343"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DNy-Qu-A3R">
-                                                                    <rect key="frame" x="124.33333333333334" y="0.0" width="142.00000000000003" height="29.333333333333332"/>
+                                                                    <rect key="frame" x="209.33333333333337" y="0.0" width="142" height="29.333333333333332"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breking Beds" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uak-Vq-wVV">
                                                                             <rect key="frame" x="0.0" y="0.0" width="142" height="29.333333333333332"/>
@@ -996,7 +996,7 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" id="l6w-om-WcB">
-                                                                    <rect key="frame" x="164.66666666666666" y="49.333333333333336" width="61" height="22.000000000000007"/>
+                                                                    <rect key="frame" x="249.66666666666663" y="49.333333333333336" width="61" height="22.000000000000007"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="ENGLISH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tut-H5-L9S">
@@ -1009,7 +1009,7 @@
                                                                     <viewLayoutGuide key="safeArea" id="e78-xN-B61"/>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K9P-3X-g8c">
-                                                                    <rect key="frame" x="88.666666666666686" y="91.333333333333314" width="213" height="54"/>
+                                                                    <rect key="frame" x="173.66666666666663" y="91.333333333333314" width="213" height="54"/>
                                                                     <subviews>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GsC-ns-abQ">
                                                                             <rect key="frame" x="0.0" y="2" width="62.333333333333336" height="50"/>
@@ -1051,7 +1051,7 @@
                                                                             <viewLayoutGuide key="safeArea" id="zn0-yN-Mrh"/>
                                                                         </stackView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" id="BEQ-KZ-NLt">
-                                                                            <rect key="frame" x="155.66666666666669" y="0.0" width="57.333333333333343" height="54"/>
+                                                                            <rect key="frame" x="155.66666666666666" y="0.0" width="57.333333333333343" height="54"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geners" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02i-KY-6mJ">
@@ -1072,7 +1072,7 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" id="YzZ-FN-VGV">
-                                                                    <rect key="frame" x="3.3333333333333428" y="165.33333333333334" width="383.33333333333326" height="119.33333333333334"/>
+                                                                    <rect key="frame" x="88.333333333333343" y="165.33333333333334" width="383.33333333333326" height="119.33333333333334"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="251" verticalCompressionResistancePriority="251" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcA-by-HWH">
@@ -1105,7 +1105,7 @@
                                                                     <viewLayoutGuide key="safeArea" id="mRB-iR-kDg"/>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YR3-hG-gnL">
-                                                                    <rect key="frame" x="121.33333333333334" y="304.66666666666663" width="148.00000000000003" height="38.333333333333314"/>
+                                                                    <rect key="frame" x="206.33333333333337" y="304.66666666666663" width="148" height="38.333333333333314"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rL-76-GCX">
                                                                             <rect key="frame" x="0.0" y="0.0" width="148" height="38.333333333333336"/>
@@ -1422,10 +1422,11 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="Cmh-NE-Zst"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="homekit" catalog="system">
-                                            <color key="baseForegroundColor" name="FontColor"/>
-                                        </buttonConfiguration>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="homekit" catalog="system">
+                                            <color key="titleColor" name="FontColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="tapToMoveHome:" destination="35w-Kv-14n" eventType="touchUpInside" id="UlH-ZC-9tS"/>
                                         </connections>
@@ -1655,8 +1656,8 @@
                                             <constraint firstAttribute="width" constant="40" id="zhg-Zf-4O1"/>
                                         </constraints>
                                         <color key="tintColor" name="FontColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.backward" catalog="system"/>
                                         <connections>
                                             <action selector="tapToBack:" destination="WWK-LY-Dnl" eventType="touchUpInside" id="siT-3f-n6e"/>
                                         </connections>
@@ -1672,10 +1673,10 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="mGR-ID-g0h"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="homekit" catalog="system">
-                                            <color key="baseForegroundColor" name="FontColor"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="homekit" catalog="system">
+                                            <color key="titleColor" name="FontColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="tapToMoveHome:" destination="WWK-LY-Dnl" eventType="touchUpInside" id="ZE7-na-JFz"/>
                                             <action selector="tapToMoveHome:" destination="35w-Kv-14n" eventType="touchUpInside" id="bYu-PA-sui"/>
@@ -1922,30 +1923,33 @@
                                             <action selector="onTapMenuBar:" destination="N9x-24-Ubn" eventType="touchUpInside" id="7l8-Lb-HaR"/>
                                         </connections>
                                     </button>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="Change Theme" translatesAutoresizingMaskIntoConstraints="NO" id="kHF-kr-iSW">
-                                        <rect key="frame" x="380" y="5" width="52" height="31"/>
-                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7Os-3O-tN2">
+                                        <rect key="frame" x="280" y="0.0" width="150" height="42"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="dEn-Zh-BC4"/>
+                                            <constraint firstAttribute="width" constant="150" id="MCG-DY-CMw"/>
                                         </constraints>
-                                        <color key="onTintColor" name="AccentColor"/>
-                                        <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <segments>
+                                            <segment title="Light"/>
+                                            <segment title="Dark"/>
+                                        </segments>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <color key="selectedSegmentTintColor" name="BackgroundColor"/>
                                         <connections>
-                                            <action selector="tapToChange:" destination="N9x-24-Ubn" eventType="valueChanged" id="m5I-Gd-8Pw"/>
+                                            <action selector="tapToChnageTheme:" destination="N9x-24-Ubn" eventType="valueChanged" id="ZWP-24-teY"/>
                                         </connections>
-                                    </switch>
+                                    </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" name="BackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="E4L-ig-Ykg" firstAttribute="leading" secondItem="cJ8-bf-xNo" secondAttribute="leading" id="1s6-dc-EUh"/>
                                     <constraint firstItem="hEU-4c-NGW" firstAttribute="top" secondItem="cJ8-bf-xNo" secondAttribute="top" id="3Ee-mW-W6e"/>
-                                    <constraint firstAttribute="bottom" secondItem="kHF-kr-iSW" secondAttribute="bottom" constant="5" id="IT8-EL-TWQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Os-3O-tN2" secondAttribute="bottom" id="L98-0U-p58"/>
                                     <constraint firstAttribute="bottom" secondItem="hEU-4c-NGW" secondAttribute="bottom" id="Pew-sk-2sH"/>
                                     <constraint firstItem="E4L-ig-Ykg" firstAttribute="top" secondItem="cJ8-bf-xNo" secondAttribute="top" id="bcd-H6-0yY"/>
                                     <constraint firstItem="hEU-4c-NGW" firstAttribute="leading" secondItem="cJ8-bf-xNo" secondAttribute="leading" id="eGS-ng-O0Z"/>
-                                    <constraint firstAttribute="trailing" secondItem="kHF-kr-iSW" secondAttribute="trailing" id="nTM-QZ-fzV"/>
-                                    <constraint firstItem="kHF-kr-iSW" firstAttribute="top" secondItem="cJ8-bf-xNo" secondAttribute="top" constant="5" id="nbN-a2-ydt"/>
+                                    <constraint firstItem="7Os-3O-tN2" firstAttribute="top" secondItem="cJ8-bf-xNo" secondAttribute="top" id="h7f-N1-8eM"/>
                                     <constraint firstAttribute="bottom" secondItem="E4L-ig-Ykg" secondAttribute="bottom" id="pgU-PL-GvV"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Os-3O-tN2" secondAttribute="trailing" id="wzG-qe-cwm"/>
                                     <constraint firstAttribute="height" constant="41" id="zGN-4C-fdD"/>
                                 </constraints>
                             </view>
@@ -1981,6 +1985,7 @@
                     <navigationItem key="navigationItem" id="EIb-Bq-7LV"/>
                     <connections>
                         <outlet property="headerView" destination="ZAc-6A-9E9" id="t5H-aE-HGx"/>
+                        <outlet property="selectedSegment" destination="7Os-3O-tN2" id="mkl-re-6ih"/>
                         <outlet property="tableView" destination="Br2-bY-ABn" id="9LF-eN-gy2"/>
                         <outlet property="tableViewWidth" destination="Yye-wM-o55" id="Y8A-mu-DAc"/>
                         <outlet property="usetNamelbl" destination="dBj-xx-Lct" id="vvK-0p-e8C"/>
@@ -2017,10 +2022,10 @@
                                             <constraint firstAttribute="width" constant="50" id="b6j-5y-hRk"/>
                                             <constraint firstAttribute="width" secondItem="16k-bG-CBL" secondAttribute="height" multiplier="25:22" id="jiN-lf-FVI"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system" title="">
-                                            <color key="baseForegroundColor" name="FontColor"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="" image="arrow.backward" catalog="system">
+                                            <color key="titleColor" name="FontColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="tapToBack:" destination="aSi-8x-akT" eventType="touchUpInside" id="pXf-LV-0PN"/>
                                         </connections>
@@ -2036,10 +2041,10 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="exr-8j-8Q9"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="homekit" catalog="system">
-                                            <color key="baseForegroundColor" name="FontColor"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="homekit" catalog="system">
+                                            <color key="titleColor" name="FontColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="tapToMoveHome:" destination="35w-Kv-14n" eventType="touchUpInside" id="8DS-Pm-SXo"/>
                                             <action selector="tapToMoveHome:" destination="aSi-8x-akT" eventType="touchUpInside" id="d7e-yj-gxq"/>
