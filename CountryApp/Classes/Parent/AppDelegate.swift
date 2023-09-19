@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if isAuth {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let homeVC = storyboard.instantiateViewController(identifier: "HomeViewController") as! HomeVC
-//                let productVXC = storyboard.instantiateViewController(identifier: "productList") as! ProductListVC
                 let navController = Config.appDelegator.window?.rootViewController as! UINavigationController
                 navController.viewControllers = [homeVC]
                 Config.appDelegator.window?.rootViewController = navController

@@ -37,7 +37,6 @@ let  htmlContent = """
     all the text and instructions for the document </b></h1>
 </body>
 </html>
-
 """
 
 enum UserSection {
@@ -62,16 +61,12 @@ struct Config {
     static let appDelegator = UIApplication.shared.delegate! as! AppDelegate
 }
 
-
 /*---------------------------------------------------
  Place Holder image
  ---------------------------------------------------*/
 struct PlaceHolder {
     static let noImage = UIImage(named: "noImage")
 }
-
-
-
 
 struct MTUserDefault {
     static var shared = MTUserDefault()
@@ -84,6 +79,13 @@ struct MTUserDefault {
             Config.userDefault.set(newValue.rawValue , forKey : "SelectedTheme")
             Config.userDefault.synchronize()
         }
-        
+    }
+}
+
+extension String {
+    func localizableString(loc : String) -> String {
+        let path = Bundle.main.path(forResource: loc, ofType: "lproj")
+        let bundle = Bundle(path: path!)
+        return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
     }
 }

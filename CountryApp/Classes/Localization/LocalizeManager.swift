@@ -18,11 +18,21 @@ var languageList : [Language] =  [
 
 //MARK: - Localization  Methods
 class AppHelper : NSObject {
-    static func getLocalizeString(str:String) -> String {
-           let string = Bundle.main.path(forResource: UserDefaults.standard.string(forKey: "Language"), ofType: "lproj")
-           let myBundle = Bundle(path: string!)
-           return (myBundle?.localizedString(forKey: str, value: "", table: nil))!
-       }
+    
+    static let shared = AppHelper()
+    
+    func getLocalizeString(str:String) -> String {
+        let string = Bundle.main.path(forResource: UserDefaults.standard.string(forKey: "Language"), ofType: "lproj")
+        let myBundle = Bundle(path: string!)
+        return (myBundle?.localizedString(forKey: str, value: "", table: nil))!
+    }
+    
+    func setLanguage(_ languageCode: String) {
+        Config.userDefault.set(languageCode, forKey: "Language")
+        Config.userDefault.synchronize()
+    }
+    
+    
 }
 
 private var bundleKey: UInt8 = 0
@@ -30,12 +40,12 @@ private var bundleKey: UInt8 = 0
 class LocalizationManager {
     static let shared = LocalizationManager()
     private init() {}
-
+    
     func setLanguage(_ languageCode: String) {
         Config.userDefault.set(languageCode, forKey: "Language")
         Config.userDefault.synchronize()
     }
-
+    
     func localizedString(_ key: String) -> String {
         return NSLocalizedString(key, comment: "")
     }

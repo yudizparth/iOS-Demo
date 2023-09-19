@@ -12,6 +12,7 @@
 		9102CCBB2A94DD170017C003 /* MovieInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9102CCB92A94DD170017C003 /* MovieInfoCell.swift */; };
 		9102CCBC2A94DD170017C003 /* MovieInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9102CCBA2A94DD170017C003 /* MovieInfoCell.xib */; };
 		9102CCBE2A94DF420017C003 /* MovieDataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9102CCBD2A94DF420017C003 /* MovieDataVC.swift */; };
+		91114B662AB97988002F7459 /* AnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91114B652AB97988002F7459 /* AnimationVC.swift */; };
 		911C85D42A971F2D00762E13 /* TableViewDiffableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911C85D32A971F2D00762E13 /* TableViewDiffableVC.swift */; };
 		911C85D62A976E3100762E13 /* CompositionalLayoutVC .swift in Sources */ = {isa = PBXBuildFile; fileRef = 911C85D52A976E3100762E13 /* CompositionalLayoutVC .swift */; };
 		911EA3F82A4D42790089C1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911EA3F72A4D42790089C1A8 /* AppDelegate.swift */; };
@@ -91,6 +92,7 @@
 		9102CCB92A94DD170017C003 /* MovieInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoCell.swift; sourceTree = "<group>"; };
 		9102CCBA2A94DD170017C003 /* MovieInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieInfoCell.xib; sourceTree = "<group>"; };
 		9102CCBD2A94DF420017C003 /* MovieDataVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataVC.swift; sourceTree = "<group>"; };
+		91114B652AB97988002F7459 /* AnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationVC.swift; sourceTree = "<group>"; };
 		911C85D32A971F2D00762E13 /* TableViewDiffableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDiffableVC.swift; sourceTree = "<group>"; };
 		911C85D52A976E3100762E13 /* CompositionalLayoutVC .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompositionalLayoutVC .swift"; sourceTree = "<group>"; };
 		911EA3F42A4D42790089C1A8 /* CountryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -309,6 +311,7 @@
 				910D38D72A8276CA00316F17 /* WebSeries  */,
 				91E9503A2AB03B1700566CDA /* Webkit */,
 				91A30C3E2AB1C69300E99504 /* Localization */,
+				91114B652AB97988002F7459 /* AnimationVC.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -706,6 +709,7 @@
 				91E839892A690E0100D31C4C /* WebSeries.swift in Sources */,
 				9102CCBE2A94DF420017C003 /* MovieDataVC.swift in Sources */,
 				913C641F2A5D2E3200616EF9 /* FavVC.swift in Sources */,
+				91114B662AB97988002F7459 /* AnimationVC.swift in Sources */,
 				91CA5FDF2AA089EC005E02FA /* ProductBanner.swift in Sources */,
 				91540E682A820796000BCF27 /* EpisodeInfoVC.swift in Sources */,
 				91E41E6A2A938462002FC7F4 /* MovieInfo+CoreDataClass.swift in Sources */,

@@ -27,9 +27,6 @@ class LocalizationVC: UIViewController {
     @IBAction func tapToDone(_ sender: UIBarButtonItem) {
         toolBar.isHidden = true
         languagePicker.isHidden =  true
-        LocalizationManager.shared.setLanguage(languageList[languagePicker.tag].code)
-        let greeting = LocalizationManager.shared.localizedString("Picke Language")
-        selectedLanguageLbl.text = greeting
     }
     
 }
@@ -57,10 +54,12 @@ extension LocalizationVC : UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedLanguageLbl.text = "Selected Language is \(languageList[row].name)"
         languagePicker.tag = row
+        AppHelper.shared.setLanguage(languageList[row].code)
+        selectedLanguageLbl.text = AppHelper.shared.getLocalizeString(str: "Pick Language")
     }
 
 }
+
 
 

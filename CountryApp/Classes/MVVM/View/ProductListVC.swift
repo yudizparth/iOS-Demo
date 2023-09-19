@@ -34,13 +34,13 @@ extension ProductListVC {
             guard self != nil else  {return }
             switch event {
             case .isLoading :
-                print("isLoading")
+                print("isLoading..........")
                 break
             case .stopLoading :
-                print("stopLoading")
+                print("stopLoading..........")
                 break
             case .dataLoaded :
-                print("dataLoaded")
+                print("dataLoaded..........")
                 DispatchQueue.main.async {
                     self?.tableView.reloadData()
                 }
@@ -73,5 +73,20 @@ extension ProductListVC : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0
+        let transform  = CATransform3DTranslate(CATransform3DIdentity, -250, 20, 0)
+        cell.layer.transform = transform
+        UIView.animate(withDuration: 1.0) {
+            cell.alpha = 1.0
+            cell.layer.transform = CATransform3DIdentity
+        }
+        //MARK: - Animation usiug SpringWithDamping .... Springy Wave Behave to View Animate
+//        UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.9, initialSpringVelocity: 0.5) {
+//            cell.alpha = 1.0
+//            cell.layer.transform = CATransform3DIdentity
+//        }
     }
 }

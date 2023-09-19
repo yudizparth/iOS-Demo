@@ -15,19 +15,19 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate{
     @IBOutlet weak var tableViewWidth: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     var isSideView : Bool = false
-
+    
     var menu: [SideMenuModel] = [
-           SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Core-Data"),
-           SideMenuModel(icon: UIImage(systemName: "music.note")!, title: "TBL-Diffable"),
-           SideMenuModel(icon: UIImage(systemName: "film.fill")!, title: "Composition Layout"),
-           SideMenuModel(icon: UIImage(systemName: "book.fill")!, title: "MVVM"),
-           SideMenuModel(icon: UIImage(systemName: "beats.powerbeatspro.chargingcase.fill")!, title: "WebKit"),
-           SideMenuModel(icon: UIImage(systemName: "pencil.slash")!, title: "Select Language"),
-           SideMenuModel(icon: UIImage(systemName: "hand.thumbsup.fill")!, title: "Like us on facebook"),
-           SideMenuModel(icon: UIImage(systemName: "applelogo")!, title: "Logout")
-       ]
-
- 
+        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Core-Data"),
+        SideMenuModel(icon: UIImage(systemName: "music.note")!, title: "TBL-Diffable"),
+        SideMenuModel(icon: UIImage(systemName: "film.fill")!, title: "Composition Layout"),
+        SideMenuModel(icon: UIImage(systemName: "book.fill")!, title: "MVVM"),
+        SideMenuModel(icon: UIImage(systemName: "beats.powerbeatspro.chargingcase.fill")!, title: "WebKit"),
+        SideMenuModel(icon: UIImage(systemName: "pencil.slash")!, title: "Select Language"),
+        SideMenuModel(icon: UIImage(systemName: "circles.hexagonpath.fill")!, title: "Animation"),
+        SideMenuModel(icon: UIImage(systemName: "applelogo")!, title: "Logout")
+    ]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(SideMenuCellTableViewCell.nib, forCellReuseIdentifier: SideMenuCellTableViewCell.identifier)
@@ -35,13 +35,12 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate{
         tableView.isHidden = true
         headerView.isHidden = true
         tableView.estimatedRowHeight = 80
-        let greeting = LocalizationManager.shared.localizedString("Parth Prajapati")
-        usetNamelbl.text =  greeting
+        usetNamelbl.text =  AppHelper.shared.getLocalizeString(str: "Parth Prajapati")
         selectedSegment.selectedSegmentIndex = MTUserDefault.shared.theme.rawValue
         print( MTUserDefault.shared.theme.rawValue)
     }
     
-
+    
     @IBAction func tapToChnageTheme(_ sender: UISegmentedControl) {
         MTUserDefault.shared.theme = Theme(rawValue: selectedSegment.selectedSegmentIndex)!
         self.view.window?.overrideUserInterfaceStyle = MTUserDefault.shared.theme.getUserInterface()
@@ -49,7 +48,7 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate{
     
     @IBAction func onTapMenuBar (_ sender : UIButton){
         tableView.isHidden = false
-       
+        
         self.view.bringSubviewToFront(tableView)
         if !isSideView{
             UIView.animate(withDuration: 1.0) { [self] in
@@ -67,21 +66,35 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate{
     }
 }
 
-
 //MARK: - Methods
-extension HomeVC  : UITableViewDataSource , UITableViewDelegate{
+extension HomeVC  {
+    func setDarkMode() {
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .dark
+        }
+    }
+    
+    func setLightMode() {
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        }
+    }
+}
 
+//MARK: -Table View Methods
+extension HomeVC  : UITableViewDataSource , UITableViewDelegate{
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.menu.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SideMenuCellTableViewCell.identifier, for: indexPath) as? SideMenuCellTableViewCell else { fatalError("xib doesn't exist") }
         cell.imgMenuItem.image = self.menu[indexPath.row].icon
         cell.lblMenuText.text = self.menu[indexPath.row].title
         return cell
     }
-        
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0{
             let collectionVC : AddMovieInfoVC = self.storyboard?.instantiateViewController(withIdentifier: "collectionVC") as! AddMovieInfoVC
@@ -104,7 +117,11 @@ extension HomeVC  : UITableViewDataSource , UITableViewDelegate{
         }
         else if indexPath.row == 5 {
             let vc  = self.storyboard?.instantiateViewController(withIdentifier: "Localization") as! LocalizationVC
-            navigationController?.pushViewController( vc , animated: true)
+            navigationController?.pushViewController(vc , animated: true)
+        }
+        else if indexPath.row == 6 {
+            let vc  = self.storyboard?.instantiateViewController(withIdentifier: "Animation") as! AnimationVC
+            navigationController?.pushViewController(vc , animated: true)
         }
         else {
             let storyboard = UIStoryboard(name: "Entry", bundle: nil)
@@ -114,15 +131,13 @@ extension HomeVC  : UITableViewDataSource , UITableViewDelegate{
         }
     }
     
-    func setDarkMode() {
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .dark
-        }
-    }
-
-    func setLightMode() {
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .light
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.alpha = 0
+        let transform  = CATransform3DTranslate(CATransform3DIdentity, -250, 20, 0)
+        cell.layer.transform = transform
+        UIView.animate(withDuration: 2.0) {
+            cell.alpha = 1.0
+            cell.layer.transform = CATransform3DIdentity
         }
     }
 }

@@ -19,6 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        window?.overrideUserInterfaceStyle = .light
         Config.appDelegator.window = self.window
         self.window?.overrideUserInterfaceStyle = MTUserDefault.shared.theme.getUserInterface()
+        print("Get User Interface \(MTUserDefault.shared.theme.getUserInterface())")
+        Config.userDefault.synchronize()
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
