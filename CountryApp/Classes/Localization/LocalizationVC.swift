@@ -27,6 +27,7 @@ class LocalizationVC: UIViewController {
     @IBAction func tapToDone(_ sender: UIBarButtonItem) {
         toolBar.isHidden = true
         languagePicker.isHidden =  true
+        Config.appDelegator.checkUserLogedin()
     }
     
 }

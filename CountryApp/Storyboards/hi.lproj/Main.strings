@@ -3,7 +3,7 @@
 "02i-KY-6mJ.text" = "Geners";
 
 /* Class = "UITextField"; placeholder = "Search Your Country "; ObjectID = "0C4-MB-9jA"; */
-"0C4-MB-9jA.placeholder" = "Search Your Country ";
+"0C4-MB-9jA.placeholder" = "अपना देश खोजें ";
 
 /* Class = "UILabel"; text = "movie Data"; ObjectID = "0NL-dL-c6s"; */
 "0NL-dL-c6s.text" = "movie Data";

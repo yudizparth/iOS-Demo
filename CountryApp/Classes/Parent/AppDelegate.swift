@@ -19,22 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
      
-        let isAuth = checkAuthentication()
+       
         
         DispatchQueue.main.async {
-            if isAuth {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let homeVC = storyboard.instantiateViewController(identifier: "HomeViewController") as! HomeVC
-                let navController = Config.appDelegator.window?.rootViewController as! UINavigationController
-                navController.viewControllers = [homeVC]
-                Config.appDelegator.window?.rootViewController = navController
-            } else {
-                let storyboard = UIStoryboard(name: "Entry", bundle: nil)
-                let loginViewController = storyboard.instantiateViewController(withIdentifier: "loginVC") as! LoginVC
-                let navController = Config.appDelegator.window?.rootViewController as! UINavigationController
-                navController.viewControllers = [loginViewController]
-                Config.appDelegator.window?.rootViewController = navController
-            }
+            self.checkUserLogedin()
         }
 
         if  Config.userDefault.string(forKey: "Language") != nil && Config.userDefault.string(forKey: "Language")! == "gu"
@@ -69,6 +57,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    func checkUserLogedin(){
+        Config.userDefault.synchronize()
+        let isAuth = checkAuthentication()
+        print("Auth is ",isAuth)
+        if isAuth {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeVC = storyboard.instantiateViewController(identifier: "HomeViewController") as! HomeVC
+            let navController = Config.appDelegator.window?.rootViewController as! UINavigationController
+            navController.viewControllers = [homeVC]
+            Config.appDelegator.window?.rootViewController = navController
+        } else {
+            let storyboard = UIStoryboard(name: "Entry", bundle: nil)
+            let loginViewController = storyboard.instantiateViewController(withIdentifier: "loginVC") as! LoginVC
+            let navController = Config.appDelegator.window?.rootViewController as! UINavigationController
+            navController.viewControllers = [loginViewController]
+            Config.appDelegator.window?.rootViewController = navController
+        }
     }
 }
 

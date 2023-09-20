@@ -45,7 +45,7 @@ extension AddMovieInfoCell {
     @IBAction func uploadImage(_ sender: UIButton) {
         viewController?.imagePicker =  UIImagePickerController()
         viewController?.imagePicker.delegate = self
-        viewController!.present(viewController!.imagePicker, animated: true, completion: nil)
+        viewController!.present(viewController!.imagePicker, animated: true, completion: nil)   
     }
     
     @IBAction func tapToSave(_ sender: UIButton) {

@@ -10,10 +10,9 @@ import UIKit
 class LoginVC: UIViewController {
     
     @IBOutlet weak var tableView : UITableView!
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-     
         tableView.register(LoginBannerCellTableViewCell.nib, forCellReuseIdentifier: LoginBannerCellTableViewCell.loginBanner)
         tableView.register(LoginViewCell.nib, forCellReuseIdentifier: LoginViewCell.loginCell)
     }
@@ -34,6 +33,8 @@ extension LoginVC  :  UITableViewDataSource , UITableViewDelegate{
             cell.buttonTapCallback = {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeVC
+                Config.userDefault.set(true, forKey: "authorization")
+                Config.userDefault.synchronize()
                 self.navigationController?.pushViewController(homeViewController, animated: true)
             }
             return cell

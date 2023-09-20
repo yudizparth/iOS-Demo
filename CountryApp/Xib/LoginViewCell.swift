@@ -107,8 +107,6 @@ extension LoginViewCell : UITextFieldDelegate{
 //MARK: - Actions
 extension LoginViewCell {
     @IBAction func tapToHomeScreen ( _ sender : UIButton){
-        Config.userDefault.set(true, forKey: "authorization")
-        Config.userDefault.synchronize()
         buttonTapCallback?()
     }
 }
