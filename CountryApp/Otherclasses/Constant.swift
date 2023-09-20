@@ -59,6 +59,7 @@ struct Config {
     static let screenFrame = UIScreen.main.bounds
     static var userDefault = UserDefaults.standard
     static let appDelegator = UIApplication.shared.delegate! as! AppDelegate
+    static let defaultCenter  = NotificationCenter.default
 }
 
 /*---------------------------------------------------
@@ -89,3 +90,12 @@ extension String {
         return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
     }
 }
+
+
+extension Notification.Name {
+    static let changeLanguage = Notification.Name("LocalizationString")
+    
+}
+
+
+

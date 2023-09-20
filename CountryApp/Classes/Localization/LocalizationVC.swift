@@ -27,9 +27,14 @@ class LocalizationVC: UIViewController {
     @IBAction func tapToDone(_ sender: UIBarButtonItem) {
         toolBar.isHidden = true
         languagePicker.isHidden =  true
-        Config.appDelegator.checkUserLogedin()
+        //MARK: - 1. Localization Using AppDelgator Method to Reload From The Root
+        // Config.appDelegator.checkUserLogedin()
+        //MARK: - 2. Localization Using Notification Observer
+        Config.defaultCenter.post(name: Notification.Name.changeLanguage, object: nil)
+        navigationController?.popViewController(animated: true)
     }
     
+  
 }
 
 extension LocalizationVC {
@@ -53,7 +58,7 @@ extension LocalizationVC : UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return languageList[row].name
     }
-    
+
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         languagePicker.tag = row
         AppHelper.shared.setLanguage(languageList[row].code)

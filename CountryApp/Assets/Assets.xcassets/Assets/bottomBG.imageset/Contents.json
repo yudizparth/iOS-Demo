@@ -14,10 +14,31 @@
       "filename" : "Group 19@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
+    },
+    {
+      "filename" : "bg.png",
+      "idiom" : "universal",
+      "locale" : "ar",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "bg 1.png",
+      "idiom" : "universal",
+      "locale" : "ar",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "bg 2.png",
+      "idiom" : "universal",
+      "locale" : "ar",
+      "scale" : "3x"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "localizable" : true
   }
 }

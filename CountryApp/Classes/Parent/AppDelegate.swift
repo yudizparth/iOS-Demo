@@ -14,32 +14,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func checkAuthentication() -> Bool {
-        return UserDefaults.standard.bool(forKey: "authorization")
+        return Config.userDefault.bool(forKey: "authorization")
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
      
-       
-        
         DispatchQueue.main.async {
             self.checkUserLogedin()
         }
 
-        if  Config.userDefault.string(forKey: "Language") != nil && Config.userDefault.string(forKey: "Language")! == "gu"
-        {
-            LocalizationManager.shared.setLanguage("gu")
-            print("gu")
-        }
-        else  if Config.userDefault.string(forKey: "Language") != nil && Config.userDefault.string(forKey: "Language")! == "hi"
-        {
-            
-            LocalizationManager.shared.setLanguage("hi")
-            print("hi")
-        }
-        else
-        {
-            LocalizationManager.shared.setLanguage("en")
-            print("en")
+        DispatchQueue.main.async {
+            if Config.userDefault.string(forKey: "Language")! == "gu"
+            {
+                AppHelper.shared.setLanguage("gu")
+                UIView.appearance().semanticContentAttribute = .forceLeftToRight
+                print("Selected Language Gujarati ")
+            }
+            else if Config.userDefault.string(forKey: "Language")! == "hi"
+            {
+                AppHelper.shared.setLanguage("hi")
+                UIView.appearance().semanticContentAttribute = .forceLeftToRight
+                print("Selected Language Hindi")
+            }
+            else if Config.userDefault.string(forKey: "Language")! == "ar"
+            {
+                AppHelper.shared.setLanguage("ar")
+                UIView.appearance().semanticContentAttribute = .forceRightToLeft
+            }
+            else
+            {
+                AppHelper.shared.setLanguage("en")
+                UIView.appearance().semanticContentAttribute = .forceLeftToRight
+                print("Selected Language English")
+            }
         }
         window?.makeKeyAndVisible()
         return true
@@ -62,7 +69,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func checkUserLogedin(){
         Config.userDefault.synchronize()
         let isAuth = checkAuthentication()
-        print("Auth is ",isAuth)
         if isAuth {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let homeVC = storyboard.instantiateViewController(identifier: "HomeViewController") as! HomeVC

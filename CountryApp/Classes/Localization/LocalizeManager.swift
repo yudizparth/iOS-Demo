@@ -8,11 +8,11 @@
 import Foundation
 
 
-
 var languageList : [Language] =  [
     Language(name: "Gujarati", code: "gu"),
     Language(name: "Hindi", code: "hi"),
-    Language(name: "English", code: "en")
+    Language(name: "English", code: "en"),
+    Language(name: "Arabic", code: "ar")
 ]
 
 
@@ -22,7 +22,7 @@ class AppHelper : NSObject {
     static let shared = AppHelper()
     
     func getLocalizeString(str:String) -> String {
-        let string = Bundle.main.path(forResource: UserDefaults.standard.string(forKey: "Language"), ofType: "lproj")
+        let string = Bundle.main.path(forResource: Config.userDefault.string(forKey: "Language"), ofType: "lproj")
         let myBundle = Bundle(path: string!)
         return (myBundle?.localizedString(forKey: str, value: "", table: nil))!
     }
@@ -31,8 +31,6 @@ class AppHelper : NSObject {
         Config.userDefault.set(languageCode, forKey: "Language")
         Config.userDefault.synchronize()
     }
-    
-    
 }
 
 private var bundleKey: UInt8 = 0
@@ -52,6 +50,7 @@ class LocalizationManager {
 }
 
 extension Bundle {
+    
     static func setLanguage(_ languageCode: String) {
         defer { object_setClass(Bundle.main, self) }
         

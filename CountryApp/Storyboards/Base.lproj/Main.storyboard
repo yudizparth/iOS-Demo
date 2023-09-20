@@ -1984,6 +1984,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="EIb-Bq-7LV"/>
                     <connections>
+                        <outlet property="btnCountryDemo" destination="tgX-AY-z6U" id="2xo-mN-XrX"/>
+                        <outlet property="btnWebSeries" destination="hbk-m3-kPn" id="5Cx-ER-XOQ"/>
                         <outlet property="headerView" destination="ZAc-6A-9E9" id="t5H-aE-HGx"/>
                         <outlet property="selectedSegment" destination="7Os-3O-tN2" id="mkl-re-6ih"/>
                         <outlet property="tableView" destination="Br2-bY-ABn" id="9LF-eN-gy2"/>

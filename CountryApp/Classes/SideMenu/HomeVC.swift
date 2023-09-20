@@ -9,24 +9,15 @@ import UIKit
 
 class HomeVC: UIViewController, UIGestureRecognizerDelegate{
     
+    @IBOutlet weak var btnWebSeries: UIButton!
+    @IBOutlet weak var btnCountryDemo: UIButton!
     @IBOutlet weak var selectedSegment: UISegmentedControl!
     @IBOutlet weak var usetNamelbl: UILabel!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var tableViewWidth: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     var isSideView : Bool = false
-    
-    var menu: [SideMenuModel] = [
-        SideMenuModel(icon: UIImage(systemName: "house.fill")!, title: "Core-Data"),
-        SideMenuModel(icon: UIImage(systemName: "music.note")!, title: "TBL-Diffable"),
-        SideMenuModel(icon: UIImage(systemName: "film.fill")!, title: "Composition Layout"),
-        SideMenuModel(icon: UIImage(systemName: "book.fill")!, title: "MVVM"),
-        SideMenuModel(icon: UIImage(systemName: "beats.powerbeatspro.chargingcase.fill")!, title: "WebKit"),
-        SideMenuModel(icon: UIImage(systemName: "pencil.slash")!, title: "Select Language"),
-        SideMenuModel(icon: UIImage(systemName: "circles.hexagonpath.fill")!, title: "Animation"),
-        SideMenuModel(icon: UIImage(systemName: "applelogo")!, title: "Logout")
-    ]
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +26,17 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate{
         tableView.isHidden = true
         headerView.isHidden = true
         tableView.estimatedRowHeight = 80
-        usetNamelbl.text =  AppHelper.shared.getLocalizeString(str: "Parth Prajapati")
         selectedSegment.selectedSegmentIndex = MTUserDefault.shared.theme.rawValue
-        print( MTUserDefault.shared.theme.rawValue)
+        //MARK: - AddObserver Added
+        Config.defaultCenter.addObserver(self, selector: #selector(updateLanguage), name: NSNotification.Name.changeLanguage, object: nil)
+        updateLanguage()
+        //MARK: - uncomment Applying Using Appdelegater Method Root Reload Method 
     }
-    
+
+}
+
+//MARK: - Actions
+extension HomeVC {
     
     @IBAction func tapToChnageTheme(_ sender: UISegmentedControl) {
         MTUserDefault.shared.theme = Theme(rawValue: selectedSegment.selectedSegmentIndex)!
@@ -51,13 +48,13 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate{
         
         self.view.bringSubviewToFront(tableView)
         if !isSideView{
-            UIView.animate(withDuration: 1.0) { [self] in
+            UIView.animate(withDuration: 2.0) { [self] in
                 headerView.isHidden = false
                 self.isSideView = true
                 self.tableViewWidth.constant = 240
             }
         }else {
-            UIView.animate(withDuration: 1.0) {
+            UIView.animate(withDuration: 2.0) {
                 self.headerView.isHidden = true
                 self.isSideView = false
                 self.tableViewWidth.constant = 0
@@ -66,17 +63,22 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate{
     }
 }
 
-//MARK: - Methods
-extension HomeVC  {
-    func setDarkMode() {
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .dark
-        }
+extension HomeVC{
+    //MARK: - Obsever Function Set
+    @objc func updateLanguage(){
+        isArebic()
+        let nameWebseries = AppHelper.shared.getLocalizeString(str: "Country List Demo")
+        let nameCountry = AppHelper.shared.getLocalizeString(str: "Search TV Series and Show  Detail")
+        btnWebSeries.setTitle(nameWebseries, for: .normal)
+        btnCountryDemo.setTitle(nameCountry, for:  .normal)
+        usetNamelbl.text =  AppHelper.shared.getLocalizeString(str: "Parth Prajapati")
     }
     
-    func setLightMode() {
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .light
+    func isArebic(){
+        if Config.userDefault.string(forKey: "Language") == "ar" {
+            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+        }else{
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
         }
     }
 }
@@ -85,13 +87,13 @@ extension HomeVC  {
 extension HomeVC  : UITableViewDataSource , UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.menu.count
+        return menu.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SideMenuCellTableViewCell.identifier, for: indexPath) as? SideMenuCellTableViewCell else { fatalError("xib doesn't exist") }
-        cell.imgMenuItem.image = self.menu[indexPath.row].icon
-        cell.lblMenuText.text = self.menu[indexPath.row].title
+        cell.imgMenuItem.image = menu[indexPath.row].icon
+        cell.lblMenuText.text = menu[indexPath.row].title
         return cell
     }
     
@@ -141,7 +143,6 @@ extension HomeVC  : UITableViewDataSource , UITableViewDelegate{
         }
     }
 }
-
 
 
 extension AddMovieInfoVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

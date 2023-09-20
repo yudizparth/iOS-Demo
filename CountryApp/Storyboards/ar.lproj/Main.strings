@@ -3,16 +3,10 @@
 "02i-KY-6mJ.text" = "Geners";
 
 /* Class = "UITextField"; placeholder = "Search Your Country "; ObjectID = "0C4-MB-9jA"; */
-"0C4-MB-9jA.placeholder" = "Search Your Country Sodh ne Bhai Sodh";
+"0C4-MB-9jA.placeholder" = "Search Your Country ";
 
 /* Class = "UILabel"; text = "movie Data"; ObjectID = "0NL-dL-c6s"; */
 "0NL-dL-c6s.text" = "movie Data";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "16k-bG-CBL"; */
-"16k-bG-CBL.normalTitle" = "Button";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1sY-0i-a3C"; */
-"1sY-0i-a3C.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "NO"; ObjectID = "1uU-Ji-vyn"; */
 "1uU-Ji-vyn.text" = "NO";
@@ -26,17 +20,8 @@
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "38n-xa-LBD"; */
 "38n-xa-LBD.normalTitle" = "Button";
 
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3Pv-Tq-fSu"; */
-"3Pv-Tq-fSu.normalTitle" = "Button";
-
 /* Class = "UILabel"; text = "compositional Layout "; ObjectID = "3gn-d8-0KQ"; */
 "3gn-d8-0KQ.text" = "compositional Layout ";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4Yt-e1-D3g"; */
-"4Yt-e1-D3g.normalTitle" = "Button";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4vw-RB-MJI"; */
-"4vw-RB-MJI.normalTitle" = "Button";
 
 /* Class = "UIButton"; configuration.title = "Show Season "; ObjectID = "6rL-76-GCX"; */
 "6rL-76-GCX.configuration.title" = "Show Season ";
@@ -47,6 +32,12 @@
 /* Class = "UITextField"; placeholder = "Search Your Web Series Here "; ObjectID = "6w7-Zz-NOk"; */
 "6w7-Zz-NOk.placeholder" = "Search Your Web Series Here ";
 
+/* Class = "UISegmentedControl"; 7Os-3O-tN2.segmentTitles[0] = "Light"; ObjectID = "7Os-3O-tN2"; */
+"7Os-3O-tN2.segmentTitles[0]" = "Light";
+
+/* Class = "UISegmentedControl"; 7Os-3O-tN2.segmentTitles[1] = "Dark"; ObjectID = "7Os-3O-tN2"; */
+"7Os-3O-tN2.segmentTitles[1]" = "Dark";
+
 /* Class = "UILabel"; text = "Country Detail "; ObjectID = "7V1-yo-DFr"; */
 "7V1-yo-DFr.text" = "Country Detail ";
 
@@ -55,9 +46,6 @@
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "B25-Kc-DGl"; */
 "B25-Kc-DGl.text" = "Label";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "BEf-fl-mfP"; */
-"BEf-fl-mfP.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Gujarati"; ObjectID = "BOb-em-Aer"; */
 "BOb-em-Aer.text" = "Gujarati";
@@ -77,23 +65,20 @@
 /* Class = "UILabel"; text = "Product "; ObjectID = "IzF-vi-M4E"; */
 "IzF-vi-M4E.text" = "Product ";
 
+/* Class = "UILabel"; text = "Selected Language is "; ObjectID = "KAi-xZ-eLn"; */
+"KAi-xZ-eLn.text" = "Selected Language is ";
+
 /* Class = "UILabel"; text = "10 Sept 2023"; ObjectID = "MXg-M4-ZBw"; */
 "MXg-M4-ZBw.text" = "10 Sept 2023";
 
 /* Class = "UILabel"; text = "TableView Diffable"; ObjectID = "NfD-AK-bih"; */
 "NfD-AK-bih.text" = "TableView Diffable";
 
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PZa-kt-1Yx"; */
-"PZa-kt-1Yx.normalTitle" = "Button";
-
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Q0H-qk-8B7"; */
 "Q0H-qk-8B7.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Status "; ObjectID = "QQr-YI-oPX"; */
 "QQr-YI-oPX.text" = "Status ";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "QgD-Tx-KXv"; */
-"QgD-Tx-KXv.normalTitle" = "Button";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Qyg-c1-Iby"; */
 "Qyg-c1-Iby.normalTitle" = "Button";
@@ -110,6 +95,9 @@
 /* Class = "UILabel"; text = "ENGLISH"; ObjectID = "Tut-H5-L9S"; */
 "Tut-H5-L9S.text" = "ENGLISH";
 
+/* Class = "UILabel"; text = "Select language"; ObjectID = "UIk-eX-KN8"; */
+"UIk-eX-KN8.text" = "Select language";
+
 /* Class = "UILabel"; text = "Detail Page:\n1. Name: name\n2. Language: language\n3. Poster: image -> medium\n4. Summary: summary\n5. Network: network -> name\n6. Status: status\n7. Average Runtime: averageRuntime\n8. Genres: genres\n9. Rating: rating -> average"; ObjectID = "Uka-gB-ur3"; */
 "Uka-gB-ur3.text" = "Detail Page:\n1. Name: name\n2. Language: language\n3. Poster: image -> medium\n4. Summary: summary\n5. Network: network -> name\n6. Status: status\n7. Average Runtime: averageRuntime\n8. Genres: genres\n9. Rating: rating -> average";
 
@@ -121,6 +109,9 @@
 
 /* Class = "UILabel"; text = "Summary"; ObjectID = "ZcA-by-HWH"; */
 "ZcA-by-HWH.text" = "Summary";
+
+/* Class = "UITextField"; placeholder = "Animated TextField"; ObjectID = "ZmX-36-ImR"; */
+"ZmX-36-ImR.placeholder" = "Animated TextField";
 
 /* Class = "UILabel"; text = "Republic Of India"; ObjectID = "aCi-aB-tvc"; */
 "aCi-aB-tvc.text" = "Republic Of India";
@@ -134,14 +125,8 @@
 /* Class = "UILabel"; text = "10:00"; ObjectID = "cKO-0I-67f"; */
 "cKO-0I-67f.text" = "10:00";
 
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cd1-wy-Ec5"; */
-"cd1-wy-Ec5.normalTitle" = "Button";
-
 /* Class = "UILabel"; text = "Parth Prajapati"; ObjectID = "dBj-xx-Lct"; */
 "dBj-xx-Lct.text" = "Parth Prajapati";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "fE0-YH-v8D"; */
-"fE0-YH-v8D.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Is UN Member:"; ObjectID = "fNy-hq-4Ej"; */
 "fNy-hq-4Ej.text" = "Is UN Member:";
@@ -159,16 +144,13 @@
 "hMt-Bj-uKR.text" = "Rating :";
 
 /* Class = "UIButton"; configuration.title = "Search TV Series and Show  Detail"; ObjectID = "hbk-m3-kPn"; */
-"hbk-m3-kPn.configuration.title" = "ટીવી શ્રેણી શોધો અને વિગતો બતાવો";
+"hbk-m3-kPn.configuration.title" = "Search TV Series and Show  Detail";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hbk-m3-kPn"; */
+"hbk-m3-kPn.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Duration"; ObjectID = "ijC-aY-owm"; */
 "ijC-aY-owm.text" = "Duration";
-
-/* Class = "UISwitch"; title = "Change Theme"; ObjectID = "kHF-kr-iSW"; */
-"kHF-kr-iSW.title" = "Change Theme";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kfc-CH-KJY"; */
-"kfc-CH-KJY.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "YES "; ObjectID = "l0i-KI-pbj"; */
 "l0i-KI-pbj.text" = "YES ";
@@ -182,9 +164,6 @@
 /* Class = "UILabel"; text = "Family Man"; ObjectID = "mAG-Ls-qp8"; */
 "mAG-Ls-qp8.text" = "Family Man";
 
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mHs-Lj-idO"; */
-"mHs-Lj-idO.normalTitle" = "Button";
-
 /* Class = "UILabel"; text = "10"; ObjectID = "msL-4M-Xta"; */
 "msL-4M-Xta.text" = "10";
 
@@ -193,6 +172,9 @@
 
 /* Class = "UILabel"; text = "Episode NO :"; ObjectID = "ouT-4X-sXd"; */
 "ouT-4X-sXd.text" = "Episode NO :";
+
+/* Class = "UILabel"; text = "Animation"; ObjectID = "p6y-6R-Ed0"; */
+"p6y-6R-Ed0.text" = "Animation";
 
 /* Class = "UILabel"; text = "Republic Of India"; ObjectID = "rAP-Ps-9hf"; */
 "rAP-Ps-9hf.text" = "Republic Of India";
@@ -204,7 +186,10 @@
 "s1X-pA-5Ro.normalTitle" = "Button";
 
 /* Class = "UIButton"; configuration.title = "Country List Demo"; ObjectID = "tgX-AY-z6U"; */
-"tgX-AY-z6U.configuration.title" = "દેશ યાદી ડેમો";
+"tgX-AY-z6U.configuration.title" = "Country List Demo";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "tgX-AY-z6U"; */
+"tgX-AY-z6U.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Breking Beds"; ObjectID = "uak-Vq-wVV"; */
 "uak-Vq-wVV.text" = "Breking Beds";
@@ -212,11 +197,14 @@
 /* Class = "UILabel"; text = "WebKit"; ObjectID = "v5G-Uo-uQp"; */
 "v5G-Uo-uQp.text" = "WebKit";
 
+/* Class = "UIButton"; configuration.title = "Pick Language"; ObjectID = "vwF-Zn-KWC"; */
+"vwF-Zn-KWC.configuration.title" = "Pick Language";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "vwF-Zn-KWC"; */
+"vwF-Zn-KWC.normalTitle" = "Button";
+
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xY0-Ll-Wuf"; */
 "xY0-Ll-Wuf.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Summary"; ObjectID = "yG5-j6-Elm"; */
 "yG5-j6-Elm.text" = "Summary";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "yh5-xv-ADi"; */
-"yh5-xv-ADi.normalTitle" = "Button";
