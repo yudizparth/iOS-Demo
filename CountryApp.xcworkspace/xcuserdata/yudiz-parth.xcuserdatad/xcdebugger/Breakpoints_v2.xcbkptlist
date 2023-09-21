@@ -3,4 +3,114 @@
    uuid = "45184161-AB28-43C5-A39E-478A2579DD77"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C28CCA2F-60B3-4635-BF1A-24F336E92330"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CountryApp/Xib/HeaderViewTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "HeaderViewTableViewCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "C28CCA2F-60B3-4635-BF1A-24F336E92330 - 5461b414ccbcf25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CountryApp.HeaderViewTableViewCell.lblUserName.getter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "CountryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yudiz-parth/Desktop/iOS/CountryApp/CountryApp/Xib/HeaderViewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "C28CCA2F-60B3-4635-BF1A-24F336E92330 - 4af4f390464d6719"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CountryApp.HeaderViewTableViewCell.lblUserName.setter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "CountryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yudiz-parth/Desktop/iOS/CountryApp/CountryApp/Xib/HeaderViewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "C28CCA2F-60B3-4635-BF1A-24F336E92330 - dd68f3f6b07f1528"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CountryApp.HeaderViewTableViewCell.lblUserName.modify : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "CountryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yudiz-parth/Desktop/iOS/CountryApp/CountryApp/Xib/HeaderViewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "C28CCA2F-60B3-4635-BF1A-24F336E92330 - ce08d2c5ed50ef34"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CountryApp.HeaderViewTableViewCell.lblUserName.modify : Swift.Optional&lt;__C.UIView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "CountryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yudiz-parth/Desktop/iOS/CountryApp/CountryApp/Xib/HeaderViewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "C28CCA2F-60B3-4635-BF1A-24F336E92330 - ce3b13c3aada8fed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CountryApp.HeaderViewTableViewCell.init(reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; CountryApp.HeaderViewTableViewCell"
+                  moduleName = "CountryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yudiz-parth/Desktop/iOS/CountryApp/CountryApp/Xib/HeaderViewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "89">
+               </Location>
+               <Location
+                  uuid = "C28CCA2F-60B3-4635-BF1A-24F336E92330 - b1714f749a46fdd5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CountryApp.HeaderViewTableViewCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;CountryApp.HeaderViewTableViewCell&gt;"
+                  moduleName = "CountryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yudiz-parth/Desktop/iOS/CountryApp/CountryApp/Xib/HeaderViewTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "74">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

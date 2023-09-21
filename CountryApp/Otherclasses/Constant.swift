@@ -94,6 +94,7 @@ extension String {
 
 extension Notification.Name {
     static let changeLanguage = Notification.Name("LocalizationString")
+    static let changeArrow = Notification.Name("LocalizationImage")
     
 }
 

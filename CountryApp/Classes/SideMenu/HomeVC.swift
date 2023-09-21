@@ -13,24 +13,24 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate{
     @IBOutlet weak var btnCountryDemo: UIButton!
     @IBOutlet weak var selectedSegment: UISegmentedControl!
     @IBOutlet weak var usetNamelbl: UILabel!
-    @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var tableViewWidth: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     var isSideView : Bool = false
 
-    
+    //MARK: - AddObserver Added.
+    //MARK: - UnComment Applying Using App Delegater Method Root Reload Method.
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(SideMenuCellTableViewCell.nib, forCellReuseIdentifier: SideMenuCellTableViewCell.identifier)
+        self.tableView.register(UINib(nibName: "HeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "HeaderView")
         isSideView = false
         tableView.isHidden = true
-        headerView.isHidden = true
         tableView.estimatedRowHeight = 80
         selectedSegment.selectedSegmentIndex = MTUserDefault.shared.theme.rawValue
-        //MARK: - AddObserver Added
         Config.defaultCenter.addObserver(self, selector: #selector(updateLanguage), name: NSNotification.Name.changeLanguage, object: nil)
+        isArebic()
         updateLanguage()
-        //MARK: - uncomment Applying Using Appdelegater Method Root Reload Method 
+       
     }
 
 }
@@ -49,13 +49,11 @@ extension HomeVC {
         self.view.bringSubviewToFront(tableView)
         if !isSideView{
             UIView.animate(withDuration: 2.0) { [self] in
-                headerView.isHidden = false
                 self.isSideView = true
                 self.tableViewWidth.constant = 240
             }
         }else {
             UIView.animate(withDuration: 2.0) {
-                self.headerView.isHidden = true
                 self.isSideView = false
                 self.tableViewWidth.constant = 0
             }
@@ -66,15 +64,15 @@ extension HomeVC {
 extension HomeVC{
     //MARK: - Obsever Function Set
     @objc func updateLanguage(){
-        isArebic()
         let nameWebseries = AppHelper.shared.getLocalizeString(str: "Country List Demo")
         let nameCountry = AppHelper.shared.getLocalizeString(str: "Search TV Series and Show  Detail")
         btnWebSeries.setTitle(nameWebseries, for: .normal)
         btnCountryDemo.setTitle(nameCountry, for:  .normal)
-        usetNamelbl.text =  AppHelper.shared.getLocalizeString(str: "Parth Prajapati")
+        isArebic()
+        tableView.reloadData()
     }
     
-    func isArebic(){
+    @objc func isArebic(){
         if Config.userDefault.string(forKey: "Language") == "ar" {
             UIView.appearance().semanticContentAttribute = .forceRightToLeft
         }else{
@@ -88,6 +86,10 @@ extension HomeVC  : UITableViewDataSource , UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menu.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -133,6 +135,16 @@ extension HomeVC  : UITableViewDataSource , UITableViewDelegate{
         }
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "HeaderView") as! HeaderView
+        headerView.lblUserName.text = AppHelper.shared.getLocalizeString(str: "Parth Prajapati")
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 80.0
+    }
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cell.alpha = 0
         let transform  = CATransform3DTranslate(CATransform3DIdentity, -250, 20, 0)
@@ -142,6 +154,7 @@ extension HomeVC  : UITableViewDataSource , UITableViewDelegate{
             cell.layer.transform = CATransform3DIdentity
         }
     }
+
 }
 
 

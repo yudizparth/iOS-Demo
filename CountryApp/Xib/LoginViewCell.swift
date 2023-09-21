@@ -25,6 +25,7 @@ class LoginViewCell: UITableViewCell{
     class var loginCell: String { return String(describing: self) }
     class var nib: UINib { return UINib(nibName: loginCell, bundle: nil) }
     
+    @IBOutlet weak var lblLogintxt: UILabel!
     @IBOutlet weak var contryCodeTxt : UITextField!
     @IBOutlet weak var mobileNumberTxt : UITextField!
     
@@ -32,6 +33,7 @@ class LoginViewCell: UITableViewCell{
         super.awakeFromNib()
         loadPickerDataFromJSON()
         configureTextField()
+        lblLogintxt.text =  AppHelper.shared.getLocalizeString(str: "We will send you OTP by SMS to verify your Number.")
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

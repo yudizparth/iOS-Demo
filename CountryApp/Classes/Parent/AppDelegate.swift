@@ -24,19 +24,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         DispatchQueue.main.async {
-            if Config.userDefault.string(forKey: "Language")! == "gu"
+            if Config.userDefault.string(forKey: "Language") == "gu"
             {
                 AppHelper.shared.setLanguage("gu")
                 UIView.appearance().semanticContentAttribute = .forceLeftToRight
                 print("Selected Language Gujarati ")
             }
-            else if Config.userDefault.string(forKey: "Language")! == "hi"
+            else if Config.userDefault.string(forKey: "Language") == "hi"
             {
                 AppHelper.shared.setLanguage("hi")
                 UIView.appearance().semanticContentAttribute = .forceLeftToRight
                 print("Selected Language Hindi")
             }
-            else if Config.userDefault.string(forKey: "Language")! == "ar"
+            else if Config.userDefault.string(forKey: "Language") == "ar"
             {
                 AppHelper.shared.setLanguage("ar")
                 UIView.appearance().semanticContentAttribute = .forceRightToLeft

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sailors Condensed.ttf">
+            <string>SailorsCondensed</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeaderView" customModule="CountryApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="178"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hT-Vv-vvH" userLabel="MainView">
+                    <rect key="frame" x="0.0" y="0.0" width="392" height="178"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="KOc-rJ-arP">
+                            <rect key="frame" x="10" y="10" width="60" height="158"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="DOI-y5-qMd"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parth Prajapati" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JuQ-dz-tiZ">
+                            <rect key="frame" x="80.000000000000014" y="77.333333333333329" width="132.33333333333337" height="23.333333333333329"/>
+                            <color key="tintColor" name="FontColor"/>
+                            <fontDescription key="fontDescription" name="SailorsCondensed" family="Sailors Condensed" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="FontColor"/>
+                    <constraints>
+                        <constraint firstItem="KOc-rJ-arP" firstAttribute="leading" secondItem="9hT-Vv-vvH" secondAttribute="leading" constant="10" id="9sD-ee-EeJ"/>
+                        <constraint firstItem="KOc-rJ-arP" firstAttribute="centerY" secondItem="9hT-Vv-vvH" secondAttribute="centerY" id="BdF-An-Cmf"/>
+                        <constraint firstItem="JuQ-dz-tiZ" firstAttribute="leading" secondItem="KOc-rJ-arP" secondAttribute="trailing" constant="10" id="H18-62-WRB"/>
+                        <constraint firstItem="JuQ-dz-tiZ" firstAttribute="centerY" secondItem="9hT-Vv-vvH" secondAttribute="centerY" id="QlE-4H-oaO"/>
+                        <constraint firstAttribute="bottom" secondItem="KOc-rJ-arP" secondAttribute="bottom" constant="10" id="UF7-5E-KTO"/>
+                        <constraint firstItem="KOc-rJ-arP" firstAttribute="top" secondItem="9hT-Vv-vvH" secondAttribute="top" constant="10" id="Zfb-9U-zfE"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JuQ-dz-tiZ" secondAttribute="trailing" constant="20" id="gX8-GV-eBB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="9hT-Vv-vvH" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="5An-W5-aij"/>
+                <constraint firstItem="9hT-Vv-vvH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="VW4-7o-n9S"/>
+                <constraint firstItem="9hT-Vv-vvH" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="eaJ-3i-jhq"/>
+                <constraint firstItem="9hT-Vv-vvH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jah-fP-vio"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblUserName" destination="JuQ-dz-tiZ" id="WEj-L6-RlB"/>
+            </connections>
+            <point key="canvasLocation" x="-41.221374045801525" y="-392.95774647887328"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="noImage" width="83.333335876464844" height="83.333335876464844"/>
+        <namedColor name="FontColor">
+            <color red="0.016000000759959221" green="0.075000002980232239" blue="0.21199999749660492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

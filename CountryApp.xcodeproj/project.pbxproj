@@ -84,6 +84,8 @@
 		91E950392AB03B0F00566CDA /* WebKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E950382AB03B0F00566CDA /* WebKitVC.swift */; };
 		91E9503C2AB0868100566CDA /* CustomLoaderToRotate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E9503B2AB0868100566CDA /* CustomLoaderToRotate.xib */; };
 		91E9503F2AB086AA00566CDA /* CustomLoaderToRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9503E2AB086AA00566CDA /* CustomLoaderToRotate.swift */; };
+		91F114402ABC532200802126 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F1143F2ABC532200802126 /* HeaderView.swift */; };
+		91F114422ABC539C00802126 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F114412ABC539C00802126 /* HeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -177,6 +179,8 @@
 		91E950382AB03B0F00566CDA /* WebKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitVC.swift; sourceTree = "<group>"; };
 		91E9503B2AB0868100566CDA /* CustomLoaderToRotate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomLoaderToRotate.xib; sourceTree = "<group>"; };
 		91E9503E2AB086AA00566CDA /* CustomLoaderToRotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoaderToRotate.swift; sourceTree = "<group>"; };
+		91F1143F2ABC532200802126 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		91F114412ABC539C00802126 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		C9CECC6FEBF16FAFB1BD31EB /* Pods-CountryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountryApp.debug.xcconfig"; path = "Target Support Files/Pods-CountryApp/Pods-CountryApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E8E4E9F6DB41544150621458 /* Pods_CountryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -286,6 +290,8 @@
 				91A91CD02AA71916004D8143 /* LoginViewCell.xib */,
 				91E9503D2AB0868C00566CDA /* CustomLoader */,
 				91A30C2B2AB18B7F00E99504 /* Tost */,
+				91F1143F2ABC532200802126 /* HeaderView.swift */,
+				91F114412ABC539C00802126 /* HeaderView.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -603,6 +609,7 @@
 				91A30C282AB18B6000E99504 /* CustomTost.xib in Resources */,
 				91A91CD22AA71916004D8143 /* LoginViewCell.xib in Resources */,
 				9102CCBC2A94DD170017C003 /* MovieInfoCell.xib in Resources */,
+				91F114422ABC539C00802126 /* HeaderView.xib in Resources */,
 				911EA4042A4D427A0089C1A8 /* LaunchScreen.storyboard in Resources */,
 				91E9503C2AB0868100566CDA /* CustomLoaderToRotate.xib in Resources */,
 				911EA4152A4D5E210089C1A8 /* Sailors Condensed.ttf in Resources */,
@@ -713,6 +720,7 @@
 				91E839892A690E0100D31C4C /* WebSeries.swift in Sources */,
 				9102CCBE2A94DF420017C003 /* MovieDataVC.swift in Sources */,
 				913C641F2A5D2E3200616EF9 /* FavVC.swift in Sources */,
+				91F114402ABC532200802126 /* HeaderView.swift in Sources */,
 				91114B662AB97988002F7459 /* AnimationVC.swift in Sources */,
 				91CA5FDF2AA089EC005E02FA /* ProductBanner.swift in Sources */,
 				91540E682A820796000BCF27 /* EpisodeInfoVC.swift in Sources */,
