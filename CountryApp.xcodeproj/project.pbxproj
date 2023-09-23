@@ -84,6 +84,7 @@
 		91E950392AB03B0F00566CDA /* WebKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E950382AB03B0F00566CDA /* WebKitVC.swift */; };
 		91E9503C2AB0868100566CDA /* CustomLoaderToRotate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E9503B2AB0868100566CDA /* CustomLoaderToRotate.xib */; };
 		91E9503F2AB086AA00566CDA /* CustomLoaderToRotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E9503E2AB086AA00566CDA /* CustomLoaderToRotate.swift */; };
+		91EBAEC22ABD9F6A004A8F3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91EBAEC42ABD9F6A004A8F3C /* InfoPlist.strings */; };
 		91F114402ABC532200802126 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F1143F2ABC532200802126 /* HeaderView.swift */; };
 		91F114422ABC539C00802126 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F114412ABC539C00802126 /* HeaderView.xib */; };
 /* End PBXBuildFile section */
@@ -179,6 +180,10 @@
 		91E950382AB03B0F00566CDA /* WebKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitVC.swift; sourceTree = "<group>"; };
 		91E9503B2AB0868100566CDA /* CustomLoaderToRotate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomLoaderToRotate.xib; sourceTree = "<group>"; };
 		91E9503E2AB086AA00566CDA /* CustomLoaderToRotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoaderToRotate.swift; sourceTree = "<group>"; };
+		91EBAEC32ABD9F6A004A8F3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		91EBAEC52ABD9F6E004A8F3C /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		91EBAEC62ABD9F6F004A8F3C /* gu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gu; path = gu.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		91EBAEC72ABD9F70004A8F3C /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		91F1143F2ABC532200802126 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		91F114412ABC539C00802126 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		C9CECC6FEBF16FAFB1BD31EB /* Pods-CountryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountryApp.debug.xcconfig"; path = "Target Support Files/Pods-CountryApp/Pods-CountryApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -257,6 +262,7 @@
 				911EA40B2A4D48560089C1A8 /* Xib */,
 				91A91CD32AA727C7004D8143 /* Assets */,
 				911EA4052A4D427A0089C1A8 /* Info.plist */,
+				91EBAEC42ABD9F6A004A8F3C /* InfoPlist.strings */,
 				91A30C362AB1BA5F00E99504 /* Localization */,
 			);
 			path = CountryApp;
@@ -623,6 +629,7 @@
 				91A30C372AB1BA7700E99504 /* Localizable.strings in Resources */,
 				918FDF9C2AA1AD390061A0EC /* ProductCategoriesCell.xib in Resources */,
 				911EA3FF2A4D42790089C1A8 /* Main.storyboard in Resources */,
+				91EBAEC22ABD9F6A004A8F3C /* InfoPlist.strings in Resources */,
 				91A91CCE2AA714F4004D8143 /* LoginBannerCellTableViewCell.xib in Resources */,
 				91E950372AB0303200566CDA /* Entry.storyboard in Resources */,
 				9169B31C2AAEEE4600692017 /* CountryCodes.json in Resources */,
@@ -776,6 +783,17 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
+		91EBAEC42ABD9F6A004A8F3C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				91EBAEC32ABD9F6A004A8F3C /* en */,
+				91EBAEC52ABD9F6E004A8F3C /* ar */,
+				91EBAEC62ABD9F6F004A8F3C /* gu */,
+				91EBAEC72ABD9F70004A8F3C /* hi */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -901,11 +919,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GSX5872588;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CountryApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Stella App ";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -918,7 +938,9 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yudiz.CountryApp;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -931,11 +953,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CountryApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Stella App ";
+				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_NAME)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -948,7 +972,9 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yudiz.CountryApp;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

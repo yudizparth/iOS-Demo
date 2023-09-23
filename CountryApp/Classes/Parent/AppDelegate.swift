@@ -18,35 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-     
+        if var appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String {
+            appName = AppHelper.shared.getLocalizeString(str: "CFBundleDisplayName")
+        }
+
         DispatchQueue.main.async {
             self.checkUserLogedin()
         }
 
         DispatchQueue.main.async {
-            if Config.userDefault.string(forKey: "Language") == "gu"
-            {
-                AppHelper.shared.setLanguage("gu")
-                UIView.appearance().semanticContentAttribute = .forceLeftToRight
-                print("Selected Language Gujarati ")
-            }
-            else if Config.userDefault.string(forKey: "Language") == "hi"
-            {
-                AppHelper.shared.setLanguage("hi")
-                UIView.appearance().semanticContentAttribute = .forceLeftToRight
-                print("Selected Language Hindi")
-            }
-            else if Config.userDefault.string(forKey: "Language") == "ar"
-            {
-                AppHelper.shared.setLanguage("ar")
-                UIView.appearance().semanticContentAttribute = .forceRightToLeft
-            }
-            else
-            {
-                AppHelper.shared.setLanguage("en")
-                UIView.appearance().semanticContentAttribute = .forceLeftToRight
-                print("Selected Language English")
-            }
+            self.checkLanguage()
         }
         window?.makeKeyAndVisible()
         return true
@@ -64,6 +45,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    func checkLanguage(){
+        let components = Locale.components(fromIdentifier: Locale.preferredLanguages.first!)
+        if let languageCode = components[NSLocale.Key.languageCode.rawValue] {
+            Config.userDefault.set(languageCode, forKey: "Language")
+            Config.userDefault.synchronize()
+        }
+        if Config.userDefault.string(forKey: "Language") == "gu"
+        {
+            AppHelper.shared.setLanguage("gu")
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+        }
+        else if Config.userDefault.string(forKey: "Language") == "hi"
+        {
+            AppHelper.shared.setLanguage("hi")
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+        }
+        else if Config.userDefault.string(forKey: "Language") == "ar"
+        {
+            AppHelper.shared.setLanguage("ar")
+            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+        }
+        else
+        {
+            AppHelper.shared.setLanguage("en")
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+            print("Selected Language English")
+        }
     }
     
     func checkUserLogedin(){

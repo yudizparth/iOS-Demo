@@ -31,5 +31,7 @@
 	<string>This app requires access to the photo library.</string>
     <key>UIUserInterfaceStyle</key>
     <string>Light</string>
+    <key>CFBundleDisplayName</key>
+    <string>$(PRODUCT_NAME)</string>
 </dict>
 </plist>

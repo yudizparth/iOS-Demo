@@ -3,7 +3,7 @@
 "02i-KY-6mJ.text" = "Geners";
 
 /* Class = "UITextField"; placeholder = "Search Your Country "; ObjectID = "0C4-MB-9jA"; */
-"0C4-MB-9jA.placeholder" = "अपना देश खोजें ";
+"0C4-MB-9jA.placeholder" = "अपना देश खोजें";
 
 /* Class = "UILabel"; text = "movie Data"; ObjectID = "0NL-dL-c6s"; */
 "0NL-dL-c6s.text" = "movie Data";
@@ -159,7 +159,7 @@
 "hMt-Bj-uKR.text" = "Rating :";
 
 /* Class = "UIButton"; configuration.title = "Search TV Series and Show  Detail"; ObjectID = "hbk-m3-kPn"; */
-"hbk-m3-kPn.configuration.title" = "Search TV Series and Show  Detail";
+"hbk-m3-kPn.configuration.title" = "टीवी श्रृंखला और शो विवरण खोजें";
 
 /* Class = "UILabel"; text = "Duration"; ObjectID = "ijC-aY-owm"; */
 "ijC-aY-owm.text" = "Duration";
@@ -204,7 +204,7 @@
 "s1X-pA-5Ro.normalTitle" = "Button";
 
 /* Class = "UIButton"; configuration.title = "Country List Demo"; ObjectID = "tgX-AY-z6U"; */
-"tgX-AY-z6U.configuration.title" = "Country List Demo";
+"tgX-AY-z6U.configuration.title" = "देश सूची डेमो";
 
 /* Class = "UILabel"; text = "Breking Beds"; ObjectID = "uak-Vq-wVV"; */
 "uak-Vq-wVV.text" = "Breking Beds";

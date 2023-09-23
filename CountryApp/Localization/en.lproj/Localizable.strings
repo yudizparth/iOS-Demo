@@ -10,3 +10,5 @@
 "Country List Demo" = "Country List Demo";
 "Search TV Series and Show  Detail" = "Search TV Series and Show  Detail";
 "We will send you OTP by SMS to verify your Number." = "We will send you OTP by SMS to verify your Number.";
+"CFBundleDisplayName" = "My localized app name";
+

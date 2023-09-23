@@ -159,7 +159,7 @@
 "hMt-Bj-uKR.text" = "Rating :";
 
 /* Class = "UIButton"; configuration.title = "Search TV Series and Show  Detail"; ObjectID = "hbk-m3-kPn"; */
-"hbk-m3-kPn.configuration.title" = "Search TV Series and Show  Detail";
+"hbk-m3-kPn.configuration.title" = "ટીવી શ્રેણી શોધો અને વિગતો બતાવો";
 
 /* Class = "UILabel"; text = "Duration"; ObjectID = "ijC-aY-owm"; */
 "ijC-aY-owm.text" = "Duration";
@@ -204,7 +204,7 @@
 "s1X-pA-5Ro.normalTitle" = "Button";
 
 /* Class = "UIButton"; configuration.title = "Country List Demo"; ObjectID = "tgX-AY-z6U"; */
-"tgX-AY-z6U.configuration.title" = "Country List Demo";
+"tgX-AY-z6U.configuration.title" = "તમારો દેશ શોધો";
 
 /* Class = "UILabel"; text = "Breking Beds"; ObjectID = "uak-Vq-wVV"; */
 "uak-Vq-wVV.text" = "Breking Beds";
