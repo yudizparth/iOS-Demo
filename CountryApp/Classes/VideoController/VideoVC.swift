@@ -18,7 +18,7 @@ class VideoVC: UIViewController {
     
     var avPlayer = AVPlayer()
     var avController  = AVPlayerViewController()
-    var volumeSider = UISlider()
+    var volumeSlider = UISlider()
     let playerStack = UIStackView()
     var isPlay : Bool = false
     let playButton = UIButton(type: .system)
@@ -136,17 +136,25 @@ extension VideoVC {
       
         playerView.addSubview(playerStack)
         playerView.addSubview(playerTrackProgressView)
-        playerView.addSubview(volumeSider)
+        playerView.addSubview(volumeSlider)
     
         tapViewTapped()
     }
         
     func configureSlider(){
-        volumeSider.minimumValue = 0.0
-        volumeSider.maximumValue = 1.0
-        volumeSider.value = AVAudioSession.sharedInstance().outputVolume
-        volumeSider.addTarget(self, action: #selector(volumeSliderChanged(_:)), for: .valueChanged)
-        volumeSider.isHidden = true
+        
+        volumeSlider.minimumValue = 0.0
+        volumeSlider.maximumValue = 1.0
+        volumeSlider.translatesAutoresizingMaskIntoConstraints = true
+        volumeSlider.value = AVAudioSession.sharedInstance().outputVolume
+        volumeSlider.addTarget(self, action: #selector(volumeSliderChanged(_:)), for: .valueChanged)
+        volumeSlider.isHidden = true
+        volumeSlider.transform = CGAffineTransform(rotationAngle: .pi / 2) 
+        
+        NSLayoutConstraint.activate([
+            volumeSlider.widthAnchor.constraint(equalToConstant: playerView.frame.width),
+            volumeSlider.trailingAnchor.constraint(equalTo: playerView.trailingAnchor, constant: -20)
+        ])
         
     }
 
@@ -176,11 +184,11 @@ extension VideoVC {
     @objc func tapViewTapped() {
         playerStack.isHidden = false
         playerTrackProgressView.isHidden = false
-        volumeSider.isHidden = false
+        volumeSlider.isHidden = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
             self.playerStack.isHidden = true
             self.playerTrackProgressView.isHidden = true
-            self.volumeSider.isHidden = true
+            self.volumeSlider.isHidden = true
         }
     }
     
