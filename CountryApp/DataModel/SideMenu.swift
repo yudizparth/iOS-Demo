@@ -23,5 +23,6 @@ var menu : [SideMenuModel] = [
     SideMenuModel(icon: UIImage(systemName: "book.fill")!, title: "WebKit"),
     SideMenuModel(icon: UIImage(systemName: "pencil.slash")!, title: "Select Language"),
     SideMenuModel(icon: UIImage(systemName: "circles.hexagonpath.fill")!, title: "Animation"),
+    SideMenuModel(icon: UIImage(systemName: "video.fill")!, title: "Video Player"),
     SideMenuModel(icon: UIImage(systemName: "applelogo")!, title: "Logout")
 ]

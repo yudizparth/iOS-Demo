@@ -127,11 +127,15 @@ extension HomeVC  : UITableViewDataSource , UITableViewDelegate{
             let vc  = self.storyboard?.instantiateViewController(withIdentifier: "Animation") as! AnimationVC
             navigationController?.pushViewController(vc , animated: true)
         }
+        else if indexPath.row == 7 {
+            let vc  = self.storyboard?.instantiateViewController(withIdentifier: "VideoID") as! VideoVC
+            navigationController?.pushViewController(vc , animated: true)
+        }
         else {
             let storyboard = UIStoryboard(name: "Entry", bundle: nil)
             let  logoutVC = storyboard.instantiateViewController(withIdentifier: "loginVC") as! LoginVC
             Config.userDefault.set(false, forKey: "authorization")
-            navigationController?.pushViewController( logoutVC , animated: true)
+            navigationController?.pushViewController( logoutVC , animated: false)
         }
     }
     
