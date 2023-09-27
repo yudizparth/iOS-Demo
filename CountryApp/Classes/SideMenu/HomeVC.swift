@@ -128,7 +128,9 @@ extension HomeVC  : UITableViewDataSource , UITableViewDelegate{
             navigationController?.pushViewController(vc , animated: true)
         }
         else if indexPath.row == 7 {
-            let vc  = self.storyboard?.instantiateViewController(withIdentifier: "VideoID") as! VideoVC
+//            let vc  = self.storyboard?.instantiateViewController(withIdentifier: "NetflixID") as! NetflixVC
+
+            let vc  = self.storyboard?.instantiateViewController(withIdentifier: "DemoVideo") as! VideoDemo
             navigationController?.pushViewController(vc , animated: true)
         }
         else {
