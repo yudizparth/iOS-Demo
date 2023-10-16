@@ -33,7 +33,7 @@ class Country{
         }else {
             self.flag = nil
         }
-        if let coatOfAramsDict = dict["coatOfArms"] as? NSDictionary {
+        if let coatOfAramsDict = dict["coatOfArms"]as? NSDictionary {
             self.coatOfArams = CoatOfArms(dict: coatOfAramsDict)
         }
         else {

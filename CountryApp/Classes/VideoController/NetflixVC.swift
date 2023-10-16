@@ -10,16 +10,15 @@ import AVFoundation
 
 class NetflixVC: UIViewController {
     
-    var player : AVPlayer? = nil
-    var playerLayer : AVPlayerLayer? = nil
+    weak var player : AVPlayer!
+    weak var playerLayer : AVPlayerLayer!
     var timeObserver : Any? = nil
     var isThumbSeek : Bool = false
     let videoURL = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
     var hideTimer: Timer?
+    let customLoader = CustomLoaderToRotate.initwith()
     
-    
-    
-    @IBOutlet weak var videoPlayer: UIView!
+    @IBOutlet weak var videoPlayerView: UIView!
     @IBOutlet weak var videoPlayerHeight: NSLayoutConstraint!
     @IBOutlet weak var viewControll: UIView! {
         didSet{
@@ -64,12 +63,16 @@ class NetflixVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setCustomLoader()
     }
     
     deinit {
         player?.pause()
+        player?.removeTimeObserver(timeObserver as Any)
+        player?.replaceCurrentItem(with: nil) // Release the current item
         player = nil
-        playerLayer  = nil
+        playerLayer?.removeFromSuperlayer()
+        playerLayer = nil
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -77,18 +80,19 @@ class NetflixVC: UIViewController {
     }
     
     func setVideoPlayer() {
+        customLoader.startAnimating()
         guard let url = URL(string: videoURL) else { return }
-        if self.player == nil {
-            self.player = AVPlayer(url: url)
-            self.playerLayer = AVPlayerLayer(player: player)
-            self.playerLayer?.videoGravity = .resizeAspectFill
-            self.playerLayer?.frame = self.videoPlayer.bounds
-            self.playerLayer?.addSublayer(self.viewControll.layer)
-            if let playerLayer = self.playerLayer {
+        if player == nil  {
+            player = AVPlayer(url: url)
+            playerLayer = AVPlayerLayer(player: player)
+            playerLayer?.videoGravity = .resizeAspectFill
+            playerLayer?.frame = videoPlayerView.bounds
+            playerLayer?.addSublayer(viewControll.layer)
+            if let playerLayer = playerLayer {
                 self.view.layer.addSublayer(playerLayer)
             }
-            self.player?.play()
-            self.imgPlay.image = UIImage(systemName: "pause.circle")
+            player?.addObserver(self, forKeyPath: "status", options: .new, context: nil)
+            imgPlay.image = UIImage(systemName: "pause.circle")
         }
         self.setObserverToPlayer()
     }
@@ -97,18 +101,33 @@ class NetflixVC: UIViewController {
         return self.view.window?.windowScene?.interfaceOrientation
     }
     
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "status" {
+            if player?.status == .readyToPlay {
+                customLoader.stopAnimating()
+                stackCtrView.isHidden = false
+                player?.play()
+            }
+        }
+    }
+    
     override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
         super.willTransition(to: newCollection, with: coordinator)
         guard let windowInterface = self.windowInterface else { return }
         if windowInterface.isPortrait ==  true {
-            self.videoPlayerHeight.constant = 300
+            videoPlayerHeight.constant = 300
         } else {
-            self.videoPlayerHeight.constant = self.view.layer.bounds.width
+            videoPlayerHeight.constant = self.view.layer.bounds.width
         }
-        print(self.videoPlayerHeight.constant)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-            self.playerLayer?.frame = self.videoPlayer.bounds
+            self.playerLayer?.frame = self.videoPlayerView.bounds
         })
+    }
+    
+    func setCustomLoader(){
+        customLoader.center = self.videoPlayerView.center
+        videoPlayerView.addSubview(customLoader)
+        stackCtrView.isHidden = true
     }
 }
 
@@ -145,7 +164,7 @@ extension NetflixVC {
             imgPlay.image = UIImage(systemName: "pause.circle")
             player?.play()
         }
-       
+        
         switch sender.state {
         case .began:
             print("began")
@@ -215,14 +234,13 @@ extension NetflixVC {
             imgFullScreenToggle.alpha = 1.0
             btnBack.alpha = 1.0
             DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                UIView.animate(withDuration: 2.0) {
+                UIView.animate(withDuration: 2.0) { 
                     self.stackCtrView.alpha = 0.0
                     self.lbCurrentTime.alpha = 0.0
                     self.lbTotalTime.alpha = 0.0
                     self.seekSlider.alpha = 0.0
                     self.imgFullScreenToggle.alpha = 0.0
                     self.btnBack.alpha = 0.0
-                    print("View call ")
                 }
             }
         }
@@ -278,6 +296,13 @@ extension NetflixVC {
         }
         self.lbTotalTime.text = "\(hoursStr):\(minsStr):\(secsStr)"
     }
-    
-    
+}
+
+
+extension NetflixVC {
+    func configureRippleView(){
+        let rippleView = RippleView(frame: CGRect(x: 0, y: 0, width: videoPlayerView.frame.width / 2, height: videoPlayerView.frame.height))
+        rippleView.backgroundColor = UIColor.lightGray
+        videoPlayerView.addSubview(rippleView)
+    }
 }

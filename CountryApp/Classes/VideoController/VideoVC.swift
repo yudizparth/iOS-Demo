@@ -121,7 +121,6 @@ extension VideoVC {
         forwardButton.addTarget(self, action: #selector(forwardButtonTapped), for: .touchUpInside)
         backwardButton.addTarget(self, action: #selector(backwardButtonTapped), for: .touchUpInside)
         configureStack()
-//        configureSlider()
     }
     
     func configureStack(){

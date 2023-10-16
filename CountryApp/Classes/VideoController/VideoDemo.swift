@@ -55,6 +55,7 @@ extension VideoDemo : UITableViewDelegate , UITableViewDataSource {
                 currentlyPlayingCell = cell
             }
         }
+
     }
 }
 

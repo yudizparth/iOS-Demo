@@ -104,6 +104,15 @@ extension LoginViewCell : UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         return false
     }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == mobileNumberTxt{
+            buttonTapCallback?()
+            textField.resignFirstResponder()
+            return true
+        }
+        
+        return true
+    }
 }
 
 //MARK: - Actions

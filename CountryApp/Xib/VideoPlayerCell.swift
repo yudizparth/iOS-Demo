@@ -23,10 +23,6 @@ class VideoPlayerCell: UITableViewCell {
                 playerLayer?.frame = contentView.bounds
                 playerLayer?.videoGravity = .resizeAspect
                 videoPlayerView.layer.addSublayer(playerLayer!)
-                
-//                if frame.midX == UIScreen.main.bounds.midX {
-//                    playVideo()
-//                }
             }
         }
     }

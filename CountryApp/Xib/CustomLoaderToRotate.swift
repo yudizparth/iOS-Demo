@@ -25,11 +25,11 @@ class CustomLoaderToRotate : UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         let image = UIImage(named: "ic_loader_progress")!
-        let frame : CGRect = CGRect(x: 0, y: 0, width: 80, height: 80)
+        let frame : CGRect = CGRect(x: 20, y: 20, width: 40, height: 40)
         animationLayer.frame = frame
         animationLayer.contents = image.cgImage
         animationLayer.masksToBounds = true
-        self.centerView.layer.addSublayer(animationLayer)
+        centerView.layer.addSublayer(animationLayer)
         addRotation(forLayer: animationLayer)
         pause(layer: animationLayer)
         self.isHidden = true

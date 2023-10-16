@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class HomeVC: UIViewController, UIGestureRecognizerDelegate{
     
@@ -16,11 +17,13 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate{
     @IBOutlet weak var tableViewWidth: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     var isSideView : Bool = false
-
+    
     //MARK: - AddObserver Added.
     //MARK: - UnComment Applying Using App Delegater Method Root Reload Method.
     override func viewDidLoad() {
         super.viewDidLoad()
+        PermissionHelper.shared.checkCameraPermission()
+        
         self.tableView.register(SideMenuCellTableViewCell.nib, forCellReuseIdentifier: SideMenuCellTableViewCell.identifier)
         self.tableView.register(UINib(nibName: "HeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "HeaderView")
         isSideView = false
@@ -30,9 +33,9 @@ class HomeVC: UIViewController, UIGestureRecognizerDelegate{
         Config.defaultCenter.addObserver(self, selector: #selector(updateLanguage), name: NSNotification.Name.changeLanguage, object: nil)
         isArebic()
         updateLanguage()
-       
+        
     }
-
+    
 }
 
 //MARK: - Actions
@@ -79,6 +82,8 @@ extension HomeVC{
             UIView.appearance().semanticContentAttribute = .forceLeftToRight
         }
     }
+    
+    
 }
 
 //MARK: -Table View Methods
@@ -128,9 +133,12 @@ extension HomeVC  : UITableViewDataSource , UITableViewDelegate{
             navigationController?.pushViewController(vc , animated: true)
         }
         else if indexPath.row == 7 {
-//            let vc  = self.storyboard?.instantiateViewController(withIdentifier: "NetflixID") as! NetflixVC
-
-            let vc  = self.storyboard?.instantiateViewController(withIdentifier: "DemoVideo") as! VideoDemo
+            let vc  = self.storyboard?.instantiateViewController(withIdentifier: "NetflixID") as! NetflixVC
+            //            let vc  = self.storyboard?.instantiateViewController(withIdentifier: "DemoVideo") as! VideoDemo
+            navigationController?.pushViewController(vc , animated: true)
+        }
+        else if indexPath.row == 8 {
+            let vc  = self.storyboard?.instantiateViewController(withIdentifier: "CustomCameraID") as! CustomCameraVC
             navigationController?.pushViewController(vc , animated: true)
         }
         else {
@@ -160,7 +168,7 @@ extension HomeVC  : UITableViewDataSource , UITableViewDelegate{
             cell.layer.transform = CATransform3DIdentity
         }
     }
-
+    
 }
 
 

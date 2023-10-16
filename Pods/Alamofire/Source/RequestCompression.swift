@@ -105,12 +105,12 @@ public struct DeflateRequestCompressor: RequestInterceptor {
     }
 
     func deflate(_ data: Data) throws -> Data {
-        var output = Data([0x78, 0x5E]) // Header
-        try output.append((data as NSData).compressed(using: .zlib) as Data)
+        var imageOutput = Data([0x78, 0x5E]) // Header
+        try imageOutput.append((data as NSData).compressed(using: .zlib) as Data)
         var checksum = adler32Checksum(of: data).bigEndian
-        output.append(Data(bytes: &checksum, count: MemoryLayout<UInt32>.size))
+        imageOutput.append(Data(bytes: &checksum, count: MemoryLayout<UInt32>.size))
 
-        return output
+        return imageOutput
     }
 
     func adler32Checksum(of data: Data) -> UInt32 {

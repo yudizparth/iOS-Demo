@@ -37,7 +37,6 @@ extension CountryListVC {
     func setCustomLoader(){
         customLoader.center = self.view.center
         self.view.addSubview(customLoader)
-        
     }
     
     func searchCountryData(searchString : String){
