@@ -11,6 +11,7 @@ import UIKit
 
 
 class DataBaseHelper {
+    static var sharedInstace = DataBaseHelper()
     
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "MovieInfo")
@@ -22,7 +23,7 @@ class DataBaseHelper {
         return container
     }()
     
-    static var sharedInstace = DataBaseHelper()
+    
     let fetchRequest: NSFetchRequest<MovieInfo> = MovieInfo.fetchRequest()
     let deleteRequest = NSBatchDeleteRequest(fetchRequest: MovieInfo.fetchRequest())
 

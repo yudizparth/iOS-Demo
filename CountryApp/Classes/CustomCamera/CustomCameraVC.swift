@@ -25,23 +25,18 @@ class CustomCameraVC: UIViewController, AVCapturePhotoCaptureDelegate , AVCaptur
     
     var isVideo : Bool = false
     var isVideoRecording : Bool = false
-    //Capture Session
-    var session : AVCaptureSession?
-    //Capture Image
-    var imageOutput = AVCapturePhotoOutput()
-    //Video Pre-View
-    var previewLayer = AVCaptureVideoPreviewLayer()
+    var session : AVCaptureSession? //Capture Session
+    var imageOutput = AVCapturePhotoOutput()  //Capture Image
+    var previewLayer = AVCaptureVideoPreviewLayer() //Video Pre-View
     var movieOutput = AVCaptureMovieFileOutput()
     var audioInput :  AVCaptureDeviceInput?
-    var currentCamera: AVCaptureDevice.Position = .back
-    // Initially set to the back camera
+    var currentCamera: AVCaptureDevice.Position = .back  // Initially set to the back camera
     
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUI()
         checkCameraPermission()
     }
-    
 }
 
 extension CustomCameraVC {
@@ -58,9 +53,7 @@ extension CustomCameraVC {
             setupCamera()
         }
     }
-    
 }
-
 
 extension CustomCameraVC {
     
@@ -100,11 +93,9 @@ extension CustomCameraVC {
                         print("Error Hai Bhai \(error)")
                     }
                 }
-                
                 if session.canAddInput(input) {
                     session.addInput(input)
                 }
-                
                 if isVideo == true{
                     if session.canAddOutput(movieOutput) {
                         session.addOutput(movieOutput)
@@ -114,7 +105,9 @@ extension CustomCameraVC {
                         session.addOutput(imageOutput)
                     }
                 }
-                session.startRunning()
+                DispatchQueue.global(qos: .userInitiated).async {
+                    self.session?.startRunning()
+                }
                 self.session = session
                 previewLayer.videoGravity = .resizeAspectFill
                 previewLayer.session = session
@@ -131,6 +124,7 @@ extension CustomCameraVC {
     }
     
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        var placeholder: PHObjectPlaceholder?
         guard let data = photo.fileDataRepresentation() else { return }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyyMMddHHmmss"
@@ -142,6 +136,8 @@ extension CustomCameraVC {
             do {
                 try data.write(to: fileURL)
                 PHPhotoLibrary.shared().performChanges({
+                    let changeRequest = PHCollectionListChangeRequest.creationRequestForCollectionList(withTitle: "name")
+                            placeholder = changeRequest.placeholderForCreatedCollectionList
                     PHAssetChangeRequest.creationRequestForAsset(from: UIImage(data: data)!)
                 }, completionHandler: { (success, error) in
                     if success {
@@ -214,24 +210,15 @@ extension CustomCameraVC {
         }
     }
     
-    
     @objc func tapToBack(){
         navigationController?.popViewController(animated: true)
     }
     
     func openSettingsActionSheet() {
-        let alertController = UIAlertController(title: "App Permissions", message: "To enable all features, please open Settings and grant the necessary permissions.", preferredStyle: .actionSheet)
-        let settingsAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
-            PermissionHelper.shared.openSettings()
+        let openSettingsAction = UIAlertAction(title: "Open Settings", style: .default) { (action) in
+            let _: () = PermissionHelper.shared.openSettings()
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        alertController.addAction(settingsAction)
-        alertController.addAction(cancelAction)
-        if let popoverController = alertController.popoverPresentationController {
-            popoverController.sourceView = self.view
-            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-            popoverController.permittedArrowDirections = []
-        }
-        present(alertController, animated: true, completion: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        showCustomActionSheet(title: "App Permissions", message: "To enable all features, please open Settings and grant the necessary permissions.", actions: [openSettingsAction, cancelAction])
     }
 }

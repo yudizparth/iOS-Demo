@@ -57,3 +57,22 @@ extension UIAlertController {
     }
 
 }
+
+
+extension UIViewController {
+    func showCustomActionSheet(title: String?, message: String?, actions: [UIAlertAction]) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+
+        for action in actions {
+            alertController.addAction(action)
+        }
+
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.sourceView = self.view
+            popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = []
+        }
+
+        present(alertController, animated: true, completion: nil)
+    }
+}

@@ -373,6 +373,7 @@
 		911EA40F2A4D48A10089C1A8 /* Otherclasses */ = {
 			isa = PBXGroup;
 			children = (
+				914F213F2ADD4A2E009DB459 /* Permission.swift */,
 				919919382A4EAAE600750375 /* Extention */,
 				912A21AD2A4DBAB4008EA0EF /* KPWebCall.swift */,
 				919919332A4E9C8B00750375 /* Constant.swift */,
@@ -492,7 +493,6 @@
 			isa = PBXGroup;
 			children = (
 				919919392A4EAB0000750375 /* DictionaryExtention.swift */,
-				914F213F2ADD4A2E009DB459 /* Permission.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";

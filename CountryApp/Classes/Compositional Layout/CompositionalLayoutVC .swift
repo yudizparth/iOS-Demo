@@ -14,6 +14,7 @@ class CompositionalLayoutVC : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUI()
+        collectionView.scrollToItem(at: IndexPath(row: 4, section: 0), at: .left, animated: true)
     }
     
 }
@@ -69,7 +70,6 @@ extension  CompositionalLayoutVC : UICollectionViewDelegate,UICollectionViewData
         switch indexPath.section {
         case 0:
             let bannerCell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCell.myCell, for: indexPath) as! MyCollectionViewCell
-            
             bannerCell.imageView.image = UIImage(named: foodTopBannerMockData[indexPath.row].image)
             return bannerCell
         case 1:
